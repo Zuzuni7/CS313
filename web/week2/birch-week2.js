@@ -2,13 +2,21 @@ function sendAlert() {
 	alert("Clicked!");
 }
 function changeDivColor(divToChange) {
-	if (divToChange === 'big') {
-		document.getElementById('big').style.backgroundColor = document.getElementById('bigColorChange').value;
-	} else if (divToChange === 'medium') {
-		document.getElementById('medium').style.backgroundColor = document.getElementById('mediumColorChange').value;
-	} else if (divToChange === 'small') {
-		document.getElementById('small').style.backgroundColor = document.getElementById('smallColorChange').value;
+	document.getElementById(divToChange).style.backgroundColor = document.getElementById(divToChange + 'ColorChange').value;
+}
+function changeDivWithPrompt(divToChange) {
+	document.getElementById(divToChange).style.backgroundColor = prompt('Please enter a color');
+}
+function changeDivWithJQuery(divToChange) {
+	var color = document.getElementById(divToChange + 'ColorChange').value;
+	$('#' + divToChange).css('background-color',color);
+}
+
+function toggleVisibility(divToChange) {
+	var $element = $("#" + divToChange);
+	if ($element.is(':visible')) {
+	    $element.fadeOut(2000);
 	} else {
-		alert('no div selected. :(');
+	    $element.fadeIn(2000);
 	}
 }

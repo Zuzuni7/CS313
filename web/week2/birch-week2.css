@@ -11,11 +11,11 @@ div:hover {
   font-weight: bold;
 }
 #big {
-	font-size:300%;
+	font-size:200%;
 	background-color:#00FF00;
 }
 #medium {
-	font-size:200%;
+	font-size:150%;
 	background-color:#DA70D6;
 }
 #small {
