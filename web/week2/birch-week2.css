@@ -1,0 +1,24 @@
+body {
+	width:80%;
+	margin-left:10%;
+	text-align:center;
+}
+div {
+	padding:10px;
+	margin:10px;
+}
+div:hover { 
+  font-weight: bold;
+}
+#big {
+	font-size:300%;
+	background-color:#00FF00;
+}
+#medium {
+	font-size:200%;
+	background-color:#DA70D6;
+}
+#small {
+	font-size:80%;
+	background-color:#9370DB;
+}
