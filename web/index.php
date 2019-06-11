@@ -26,7 +26,7 @@
 				    <div class="col">
 						<a href="assignments/assignments.php">
 							<div class="card" >
-								<img class="card-img-top" src="../../docs/code.jpg" alt="Card image cap">
+								<img class="card-img-top" src="files/code.jpg" alt="Card image cap">
 								<div class="card-body">
 							    	<p class="card-text">Assignments</p>
 								</div>		
@@ -34,9 +34,9 @@
 						</a>
 				    </div>
 				    <div class="col">
-						<a href="../../videoLibrary">
+						<a href="videoLibrary/index.php">
 							<div class="card" >
-								<img class="card-img-top" src="../../docs/code.jpg" alt="Card image cap">
+								<img class="card-img-top" src="files/code.jpg" alt="Card image cap">
 								<div class="card-body">
 							    	<p class="card-text">Project: Video Library</p>
 								</div>		
