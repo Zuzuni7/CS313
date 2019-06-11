@@ -36,7 +36,7 @@
 				    <div class="col">
 						<a href="videoLibrary/index.php">
 							<div class="card" >
-								<img class="card-img-top" src="files/code.jpg" alt="Card image cap">
+								<img class="card-img-top" src="files/library.jpeg" alt="Card image cap">
 								<div class="card-body">
 							    	<p class="card-text">Project: Video Library</p>
 								</div>		
