@@ -11,22 +11,11 @@ body {
   padding-top: 2.5rem;       /* Header height */
 }
 
-.footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  text-align:center;
-  height:40px; 
-  line-height:40px;
+.top-space {
+  margin-top:20px;
 }
-
-.header {
-	position: fixed;
-	top: 0;
-	width: 100%;
-	background-color: #7078EB;
-	color:white;
-	text-align:center;
-	height:40px; 
-	line-height:40px;
+.card-img-top {
+    width: 100%;
+    height: 15vw;
+    object-fit: cover;
 }

@@ -8,39 +8,45 @@
 		<title>Birch Home</title>
 	</head>
 	<body>
+		<?php include 'shared/header.php';?>
 		<div class="page-container">
-			<?php include 'header.php';?>
-			<div class="content-wrap">
+			<div class="content-wrap top-space">
 				<div class="container">
 				  <div class="row">
 				    <div class="col">
-				      1 of 3
-				    </div>
-				    <div class="col-6">
-				      2 of 3 (wider)
-				    </div>
-				    <div class="col">
-				      3 of 3
-				    </div>
-				  </div>
-				  <div class="row">
-				    <div class="col">
-				      1 of 3
-				    </div>
-				    <div class="col-5">
-				      2 of 3 (wider)
+						<a href="week2/birchIntro.php">
+							<div class="card" >
+								<img class="card-img-top" src="files/f1.jpg" alt="Card image cap">
+								<div class="card-body">
+							    	<p class="card-text">Nathan Birch Intro</p>
+								</div>		
+							</div>
+						</a>
 				    </div>
 				    <div class="col">
-				      3 of 3
+						<a href="assignments/assignments.php">
+							<div class="card" >
+								<img class="card-img-top" src="../../docs/code.jpg" alt="Card image cap">
+								<div class="card-body">
+							    	<p class="card-text">Assignments</p>
+								</div>		
+							</div>
+						</a>
+				    </div>
+				    <div class="col">
+						<a href="../../videoLibrary">
+							<div class="card" >
+								<img class="card-img-top" src="../../docs/code.jpg" alt="Card image cap">
+								<div class="card-body">
+							    	<p class="card-text">Project: Video Library</p>
+								</div>		
+							</div>
+						</a>
 				    </div>
 				  </div>
 				</div>
-
-
-
-
 			</div>
-			<?php include 'footer.php';?>
+			<?php include 'shared/footer.php';?>
 		</div>
 	</body>
 </html>
