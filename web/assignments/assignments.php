@@ -15,10 +15,9 @@
 			<div id="list2">
 			   <ol>
 			      <a href="../week1/hello"><li><p><em>Hello World Program</em></p></li></a>
-			      <a href="../week2"><li><p><em>Team Exercise: jquery, bootstrap, changing colors programatically.</em>
-			      Assignment: Personal Introduction</p></li></a>
-			      <li><p><em>The Philippines</em> officially known as the Republic ...</p></li>
-			      <li><p><em>The United Kingdom</em> of Great Britain and ...</p></li>
+			      <a href="../week2"><li><p><em>Team Exercise: jquery, bootstrap, changing colors programatically.</em>Assignment: Personal Introduction</p></li></a>
+			      <li><p><a  href="../week3"><em>Team Exercise: PHP Form</em></a><a  href="../week3/shopping.php">Shopping Cart</a></p></li>
+			      <a><li><p><em>The United Kingdom</em> of Great Britain and ...</p></li></a>
 			   </ol>
 			</div>
 		<?php include '../shared/footer.php';?>
