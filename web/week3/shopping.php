@@ -22,19 +22,23 @@
             session_start();
             // initialize variables if they are not already in the session
             if (!isset($_SESSION["items"])) $_SESSION["items"] = 
-                array(array("inCartCount"=>0, "name"=>"Genuine Leather Quad Combination, Regular, Indexed, 2013 Edition","url" => "pics/1.png","id" => 1,"price" => "$57.00","desc" => "Includes the LDS edition of the King James Bible, the Book of Mormon, the Doctrine and Covenants, and the Pearl of Great Price ..."),
-                      array("inCartCount"=>0, "name"=>"Marble Christus Statue","url" =>  "pics/2.png","id" => 2,"price" => "$99.98","desc" => "12 Inch Cultured White Marble Christus Statue Jesus Christ This awe-inspiring cultured marble Christus statue depicts Jesus ..."),
-                      array("inCartCount"=>0, "name"=>"Book of Mormon: Regular, Blue","url" =>  "pics/3.png","id" => 3,"price" => "$3.00","desc" => "This blue edition of the Book of Mormon includes footnotes, cross-references, and Guide to the Scriptures."),
-                      array("inCartCount"=>0, "name"=>"Beehive Bookends","url" =>  "pics/4.png","id" => 4,"price" => "$49.99","desc" => "Perfect for the book lover in your life, these bookends bring class to any bookshelf. Featuring a beehive shape, these resin ..."),
-                      array("inCartCount"=>0, "name"=>"The Mortal Messiah: From Bethlehem to Calvary [Book]","url" =>  "pics/5.png","id" => 5,"price" => "$4.49","desc" => "This used book is in Very Good condition. Come to a deeper understanding of the scope and meaning of Jesus Christ's ministry ..."),
-                      array("inCartCount"=>0, "name"=>"What the Scriptures Teach about Raising a Child [Book]","url" =>  "pics/6.png","id" => 6,"price" => "$10.49","desc" => "This used book is in Very Good condition. In these times of enormous stress on families, where can we find down-to-earth help ..."),
-                      array("inCartCount"=>0, "name"=>"Personalized Baptism Quad","url" =>  "pics/7.png","id" => 7,"price" => "$59.99","desc" => "Remember the power of covenants with our personalized temple scriptures. Featuring multiple options, you can create a ..."),
-                      array("inCartCount"=>0, "name"=>"However Long & Hard the Road [Book]","url" =>  "pics/8.png","id" => 8,"price" => "$16.99","desc" => "A book with obvious wear. May have some damage to the cover or binding but integrity is still intact. There might be writing ..."),
-                      array("inCartCount"=>0, "name"=>"Emotional Intelligence 2.0 [Book]","url" =>  "pics/9.png","id" => 9,"price" => "$24.17","desc" => "A book with obvious wear. May have some damage to the cover or binding but integrity is still intact. There might be writing ..."),
-                      array("inCartCount"=>0, "name"=>"With A Pillar of Light - artist Dave Merrill created the image he's worked many years to bring to life: the celebration of ...","url" =>  "pics/10.png","id" => 10,"price" => "$79.99","desc" =>  "Pillar of Light (36x15 Framed Art)")
+                array(array("inCartCount"=>0, "name"=>"Genuine Leather Quad Combination, Regular, Indexed, 2013 Edition","url" => "pics/1.png","id" => 1,"price" => 57.00,"desc" => "Includes the LDS edition of the King James Bible, the Book of Mormon, the Doctrine and Covenants, and the Pearl of Great Price ..."),
+                      array("inCartCount"=>0, "name"=>"Marble Christus Statue","url" =>  "pics/2.png","id" => 2,"price" => 99.98,"desc" => "12 Inch Cultured White Marble Christus Statue Jesus Christ This awe-inspiring cultured marble Christus statue depicts Jesus ..."),
+                      array("inCartCount"=>0, "name"=>"Book of Mormon: Regular, Blue","url" =>  "pics/3.png","id" => 3,"price" => 3.00,"desc" => "This blue edition of the Book of Mormon includes footnotes, cross-references, and Guide to the Scriptures."),
+                      array("inCartCount"=>0, "name"=>"Beehive Bookends","url" =>  "pics/4.png","id" => 4,"price" => 49.99,"desc" => "Perfect for the book lover in your life, these bookends bring class to any bookshelf. Featuring a beehive shape, these resin ..."),
+                      array("inCartCount"=>0, "name"=>"The Mortal Messiah: From Bethlehem to Calvary [Book]","url" =>  "pics/5.png","id" => 5,"price" => 4.49,"desc" => "This used book is in Very Good condition. Come to a deeper understanding of the scope and meaning of Jesus Christ's ministry ..."),
+                      array("inCartCount"=>0, "name"=>"What the Scriptures Teach about Raising a Child [Book]","url" =>  "pics/6.png","id" => 6,"price" => 10.49,"desc" => "This used book is in Very Good condition. In these times of enormous stress on families, where can we find down-to-earth help ..."),
+                      array("inCartCount"=>0, "name"=>"Personalized Baptism Quad","url" =>  "pics/7.png","id" => 7,"price" => 59.99,"desc" => "Remember the power of covenants with our personalized temple scriptures. Featuring multiple options, you can create a ..."),
+                      array("inCartCount"=>0, "name"=>"However Long & Hard the Road [Book]","url" =>  "pics/8.png","id" => 8,"price" => 16.99,"desc" => "A book with obvious wear. May have some damage to the cover or binding but integrity is still intact. There might be writing ..."),
+                      array("inCartCount"=>0, "name"=>"Emotional Intelligence 2.0 [Book]","url" =>  "pics/9.png","id" => 9,"price" => 24.17,"desc" => "A book with obvious wear. May have some damage to the cover or binding but integrity is still intact. There might be writing ..."),
+                      array("inCartCount"=>0, "name"=>"With A Pillar of Light - artist Dave Merrill created the image he's worked many years to bring to life: the celebration of ...","url" =>  "pics/10.png","id" => 10,"price" => 79.99,"desc" =>  "Pillar of Light (36x15 Framed Art)")
                 );
             if (!isset($_SESSION["cart"])) $_SESSION["cart"] = [];
 
+            //default filters
+            for($i = 0; $i < count($_SESSION["items"]); $i++) {
+                $_SESSION["items"][$i]['displayBool'] = true;
+            }
             // add to cart
             if(isset($_POST['submit'])){
                 $item_id = $_POST['itemId'];
@@ -44,12 +48,66 @@
                 $currentCount = intval($_SESSION["items"][$id]['inCartCount']);
                 $_SESSION["items"][$id]['inCartCount'] = $currentCount + 1;
             }
+
+            // apply filter
+            // unfinished
+            if(isset($_POST['applyFilter'])){
+                $name = $_POST['searchName'];
+                $priceFilter = $_POST['price_filter'];
+
+                for($i = 0; $i < count($_SESSION["items"]); $i++) {
+                    // filter by name
+                    if (strlen($name) > 0) {
+                        if (strpos($_SESSION["items"][$i]['name'], $name) === false) {
+                            $_SESSION["items"][$i]['displayBool'] = false;
+                        }
+                        else {
+                            $_SESSION["items"][$i]['displayBool'] = true;    
+                        }
+                    }
+                    // filter by price
+                    if($priceFilter == 1) {
+                        if($_SESSION["items"][$i]['price'] < 10) {
+                            $_SESSION["items"][$i]['displayBool'] = true;
+                        }
+                    }
+                }
+                // todo - maintain values in dom inputs
+
+            }
+
         ?>
 
         <div class="container">
-            <a href='shoppingCart.php'><img src="pics/cart.png" class="cart"></a>
+           <!--  <form id="" method="post" action="">
+                <div class="row">
+                    <div class="col-sm-4">
+                        Search by Name:<br>
+                        <input type="text" class="form-control" name="searchName">
+                    </div>
+                    <div class="col-sm-4">
+                        Filter By Price:<br>
+                        <select class="form-control" name="price_filter">
+                            <option value="0">All</option>
+                            <option value="1">Less than $10</option>
+                            <option value="2">Less than $50</option>
+                            <option value="3">Less than $100</option>
+                            <option value="4">$100 and up</option>
+                        </select>
+                    </div>
+                    <div class="col-sm-2">
+                        <br>
+                        <button type="submit" class="btn btn-light" name="applyFilter">Apply Filters</button>
+                    </div>
+                    <div class="col-sm-2">
+                        THIS IS THE PLACE FOR THE CART ICON
+                    </div>
+                </div>
+            </form><br> -->
+                        <a href='shoppingCart.php'><img src="pics/cart.png" class="cart"></a>
             <div class="row">
               <?php for ($i = 0; $i < count($_SESSION["items"])-1; $i++) { ?>
+                <?php if($_SESSION['items'][$i]['displayBool'] == true) : ?>
                   <div class="col-sm-3">
                     <div class="card">
                       <div class="card-body">
@@ -73,6 +131,9 @@
                       </div>
                     </div>
                   </div>
+                <?php else : ?>  
+                <?php endif; ?>
+                <?php ?>
               <?php } ?>
             </div>
             
