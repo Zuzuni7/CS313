@@ -11,7 +11,7 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
         <script src="birch-week3.js"></script>
         <script>
-                if ( window.history.replaceState ) {
+               if ( window.history.replaceState ) {
                     window.history.replaceState( null, null, window.location.href );
                 }
         </script>
@@ -37,11 +37,10 @@
 
             // add to cart
             if(isset($_POST['submit'])){
-                $item = $_POST['itemObject'];
-                $_SESSION["cart"][] = $item;
+                $item_id = $_POST['itemId'];
 
                 //increment counter of item being added
-                $id = array_search($item, array_column($_SESSION["items"], 'id')); 
+                $id = array_search($item_id, array_column($_SESSION["items"], 'id'));
                 $currentCount = intval($_SESSION["items"][$id]['inCartCount']);
                 $_SESSION["items"][$id]['inCartCount'] = $currentCount + 1;
             }
@@ -50,7 +49,7 @@
         <div class="container">
             <a href='shoppingCart.php'><img src="pics/cart.png" class="cart"></a>
             <div class="row">
-              <?php for ($i = 0; $i < count($_SESSION["items"]); $i++) { ?>
+              <?php for ($i = 0; $i < count($_SESSION["items"])-1; $i++) { ?>
                   <div class="col-sm-3">
                     <div class="card">
                       <div class="card-body">
@@ -59,7 +58,7 @@
                         <p class="largeFont"><?php echo $_SESSION['items'][$i]['price']; ?></p>
                         <p class="card-text"><?php echo $_SESSION['items'][$i]['desc']; ?></p>
                         <form id="" method="post" action="">
-                            <input type="hidden" name="itemObject" value="<?php echo $_SESSION['items'][$i]['id']; ?>">
+                            <input type="hidden" name="itemId" value="<?php echo $_SESSION['items'][$i]['id']; ?>">
                             <?php if($_SESSION['items'][$i]['inCartCount'] === 1) : ?>
                                 <input type="submit" value="Add to Cart Again" name="submit" class="btn btn-secondary"> <br>  
                                 <span>Added to Cart</span>

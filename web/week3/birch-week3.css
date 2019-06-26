@@ -42,6 +42,17 @@
     width: 50%;
 }
 .checkoutButton {
-    float:right !important;
-    font-size:75%;
+    float:right;
+    padding-left:20px;
+    font-size:50%;
+}
+.smInp {
+    width:50px;
+}
+.trash {
+    color: #B22222;
+}
+.hiddenButton {
+    background-color: Transparent;
+    border:none;
 }
