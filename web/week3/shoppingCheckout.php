@@ -21,38 +21,42 @@
         <?php include '../shared/header.php';?><br><br>
         <?php 
             session_start();
+
         ?>
         <div class="container">
-            <form>
+            <h3>Checkout</h3>
+            <p>For a total of $<?php echo $_SESSION["grandTotal"]; ?>.</p>
+            <form action="shoppingConfirm.php" method="post">
               <div class="form-row">
                 <div class="form-group col-md-6">
-                  <label for="inputPassword4">Full Name</label>
-                  <input type="text" class="form-control" id="inputPassword4" placeholder="Please enter your name">
+                  <label>Full Name</label>
+                  <input type="text" class="form-control" name="name">
                 </div>
                 <div class="form-group col-md-6">
-                  <label for="inputEmail4">Email</label>
-                  <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+                  <label>Email</label>
+                  <input type="email" class="form-control" name="email">
                 </div>
-              </div>
-              <div class="form-group col-md-4">
-                <label for="inputAddress">Address</label>
-                <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
               </div>
               <div class="form-row">
                 <div class="form-group col-md-4">
-                  <label for="inputCity">City</label>
-                  <input type="text" class="form-control" id="inputCity">
+                  <label>Address</label>
+                  <input type="text" class="form-control" name="address">
+                </div>
+                <div class="form-group col-md-4">
+                  <label>City</label>
+                  <input type="text" class="form-control" name="city">
                 </div>
                 <div class="form-group col-md-2">
-                  <label for="inputState">State</label>
-                  <input type="text" class="form-control" id="inputState">
+                  <label>State</label>
+                  <input type="text" class="form-control" name="state">
                 </div>
                 <div class="form-group col-md-2">
-                  <label for="inputZip">Zip</label>
-                  <input type="text" class="form-control" id="inputZip">
+                  <label>Zip</label>
+                  <input type="text" class="form-control" name="zip">
                 </div>
               </div>
               <button type="submit" class="btn btn-primary">Complete Checkout</button>
+              <a href='shoppingCart.php'><button type="button" class="btn btn-secondary">Back to Cart</button></a>
             </form>
         </div>
         <?php include '../shared/footer.php';?><br><br>

@@ -4,5 +4,5 @@
 			   text-align:center;
 			   height:40px; 
 			   line-height:40px;">
-	Footer test
+	<!-- Footer test -->
 </footer>

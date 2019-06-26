@@ -42,7 +42,7 @@
                 $_SESSION["items"][$id]['inCartCount'] = $currentCount + 1;
                 updateTotals();
             }
-            // remove to cart
+            // remove from cart
             if(isset($_POST['dec'])){
                 $itemId = $_POST['idOfItemToChange'];
                 $id = array_search($itemId, array_column($_SESSION["items"], 'id')); 
@@ -69,8 +69,13 @@
             }
         ?>
         <div class="container">
-            <h1>Welcome to your Cart! 
-                <a href="shoppingCheckout.php"><button class="btn btn-primary checkoutButton">Checkout</button></a>
+            <h1>
+                Welcome to your Cart!
+                <?php if($_SESSION['grandTotal'] > 0) : ?>
+                    <a href="shoppingCheckout.php"><button class="btn btn-primary checkoutButton">Checkout</button></a>
+                <?php else : ?>  
+                <?php endif; ?>
+                <?php ?>
                 <a href="shopping.php"><button class="btn btn-success checkoutButton" style="margin-right:20px">Keep Shopping</button></a>
             </h1>
             <table class="table table-striped">
@@ -93,10 +98,10 @@
                           <td>
                             <div class="counter">
                               <div style="display: flex;">
-                                  <input type="hidden" name="idOfItemToChange" value="<?php echo $_SESSION['items'][$i]['id']; ?>">
-                                  <input id="qty" class="smInp" value="<?php echo $_SESSION['items'][$i]['inCartCount']; ?>" />
-                                  <!-- <form method="post"><input type="submit" name="dec" value="-" class="dec"></form>
-                                  <form method="post"><input type="submit" name="inc" value="+" class="inc"></form> -->
+                                  
+                                  <span><?php echo $_SESSION['items'][$i]['inCartCount']; ?></span>&nbsp;
+                                  <form method="post"><input type="submit" name="dec" value="-" class="dec"><input type="hidden" name="idOfItemToChange" value="<?php echo $_SESSION['items'][$i]['id']; ?>"></form>
+                                  <form method="post"><input type="submit" name="inc" value="+" class="inc"><input type="hidden" name="idOfItemToChange" value="<?php echo $_SESSION['items'][$i]['id']; ?>"></form>
                               </div>
                             </div>
                           </td>
@@ -116,13 +121,17 @@
                     <td></td>
                     <td></td>
                     <td>TOTAL:</td>
-                    <td><?php echo $_SESSION["grandTotal"]; ?></td>
+                    <td><?php echo "$".$_SESSION["grandTotal"]; ?></td>
                 </tr>
               </tbody>
             </table>
-            <form method="post">
-                <button type="submit" class="btn btn-danger" name="deleteAll">Empty Cart</button>
-            </form>
+            <?php if($_SESSION['grandTotal'] > 0) : ?>
+                <form method="post">
+                    <button type="submit" class="btn btn-danger" name="deleteAll">Empty Cart</button>
+                </form>
+            <?php else : ?>  
+            <?php endif; ?>
+            <?php ?>
 
         </div>
         <?php include '../shared/footer.php';?><br><br>

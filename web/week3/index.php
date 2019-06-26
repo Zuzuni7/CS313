@@ -57,31 +57,6 @@
 				  ?>
 				  <br>
 				</div>
-			     <!--  <div class="form-check">
-			        <input class="form-check-input" type="radio" name="majorRadio" id="majorRadio1" value="option1">
-			        <label class="form-check-label" for="majorRadio1">
-			          Computer Science
-			        </label>
-			      </div>
-			      <div class="form-check">
-			        <input class="form-check-input" type="radio" name="majorRadio" id="majorRadio2" value="Web Design and Development">
-			        <label class="form-check-label" for="majorRadio2">
-			          Web Design and Development
-			        </label>
-			      </div>
-			      <div class="form-check">
-			        <input class="form-check-input" type="radio" name="majorRadio" id="majorRadio3" value="Computer Information Technology">
-			        <label class="form-check-label" for="majorRadio3">
-			          Computer Information Technology
-			        </label>
-			      </div>
-			      <div class="form-check">
-			        <input class="form-check-input" type="radio" name="majorRadio" id="majorRadio4" value="Computer Engineering">
-			        <label class="form-check-label" for="majorRadio4">
-			          Computer Engineering
-			        </label>
-			      </div>
-			    </div> -->
 				<div class="form-group col-md-6">
                     <label for="continentCheckBox">Continents Visited</label><br>
                     <div class="shiftRight">
@@ -93,40 +68,7 @@
 	                    <input  class="form-check-input" type="checkbox" name="places[]" id="place-aus" value="Australia"><label for="place-aus">Australia</label><br />
 	                    <input  class="form-check-input" type="checkbox" name="places[]" id="place-ant" value="Antarctica"><label for="place-ant">Antarctica</label><br />
 	                </div>
-
-
 				</div>
-				<!-- <div class="form-group col-md-6">
-				  <label for="continentCheckBox">Continents Visited</label>
-				  <div class="form-check">
-				    <input class="form-check-input" type="checkbox" name="continentCheckBox[]" value="North America" id="continentCheckBox1">
-				    <label class="form-check-label" for="continentCheckBox">North America</label>
-				  </div>
-				  <div class="form-check">
-				    <input class="form-check-input" type="checkbox" name="continentCheckBox[]" value="South America" id="continentCheckBox2">
-				    <label class="form-check-label" for="continentCheckBox">South America</label>
-				  </div>
-				  <div class="form-check">
-				    <input class="form-check-input" type="checkbox" name="continentCheckBox[]" value="Europe" id="continentCheckBox3">
-				    <label class="form-check-label" for="continentCheckBox">Europe</label>
-				  </div>
-				  <div class="form-check">
-				    <input class="form-check-input" type="checkbox" name="continentCheckBox[]" value="Asia" id="continentCheckBox4">
-				    <label class="form-check-label" for="continentCheckBox">Asia</label>
-				  </div>
-				  <div class="form-check">
-				    <input class="form-check-input" type="checkbox" name="continentCheckBox[]" value="Australia" id="continentCheckBox5">
-				    <label class="form-check-label" for="continentCheckBox">Australia</label>
-				  </div>
-				  <div class="form-check">
-				    <input class="form-check-input" type="checkbox" name="continentCheckBox[]" value="Africa" id="continentCheckBox6">
-				    <label class="form-check-label" for="continentCheckBox">Africa</label>
-				  </div>
-				  <div class="form-check">
-				    <input class="form-check-input" type="checkbox" name="continentCheckBox[]" value="Antarctica" id="continentCheckBox7">
-				    <label class="form-check-label" for="continentCheckBox">Antarctica</label>
-				  </div>
-				</div> -->
 			  </div>
 			  <div class="row">
 				<div class="form-group col-md-12">
