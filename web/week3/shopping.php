@@ -48,7 +48,7 @@
         ?>
 
         <div class="container">
-            <img src="pics/cart.png" class="cart">
+            <a href='shoppingCart.php'><img src="pics/cart.png" class="cart"></a>
             <div class="row">
               <?php for ($i = 0; $i < count($_SESSION["items"]); $i++) { ?>
                   <div class="col-sm-3">

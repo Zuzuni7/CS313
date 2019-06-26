@@ -41,3 +41,7 @@
     margin-right: auto;
     width: 50%;
 }
+.checkoutButton {
+    float:right !important;
+    font-size:75%;
+}
