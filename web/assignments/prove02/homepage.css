@@ -1,0 +1,29 @@
+.img {
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 75%;
+  border-radius: 20px;
+}
+
+.text {
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 75%;
+}
+
+.title {
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 75%;
+}
+
+body {
+    font: bold 20px Baskerville;
+    text-align: center;
+    background-color: beige;
+    background-repeat: no-repeat, stretch;
+}
+

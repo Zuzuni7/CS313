@@ -3,10 +3,10 @@
 
 <head>
 	<meta charset="utf-8">
-	<meta name="author" content="Nathan Birch">
+	<meta name="author" content="Shalom Sims">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<link rel="stylesheet" href="assignments.css">
-	<title>Birch Home</title>
+	<title>Shalom in the Home</title>
 </head>
 
 <body>
