@@ -9,13 +9,14 @@
 		<div class="page-container">
 			<a href="./assignments/prove02/homepage.html">
 				<div class="content-wrap top-space">
-					<p class="card-text">About Me</p></a>
+					<p class="card-text">About Me</p>
 				</div>
-				<div class="col">
-					<a href="assignments/assignments.php">
-						<p class="card-text">Assignments</p>
-					</a>
-				</div>
+			</a>
+			<div class="col">
+				<a href="assignments/assignments.php">
+					<p class="card-text">Assignments</p>
+				</a>
+			</div>
 		</div>
 	</body>
 </html>
