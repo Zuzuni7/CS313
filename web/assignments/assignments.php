@@ -17,30 +17,31 @@
 </head>
 
 <body>
-	<div class="w3-top">
-	<ol>
-		<a href="../week1/hello.html">
-			<li>
-				<p><em>Hello World Program</em></p>
-			</li>
-		</a>
-		<a href="../Team-01/assignments/main.html">
-			<li>
-				<p><em>Team Exercise: jquery, bootstrap, changing colors programatically.</em>Assignment: Personal Introduction</p>
-			</li>
-		</a>
-		<a href="./prove03">
-			<li>
-				<p><em>Prove 03 Shopping Cart</em></p>
-			</li>
-		</a>
-	</ol>
-	</div>
 	<div class="page-container">
 		<h1 class="hd">Assignments</h1>
 		<div id="list2">
 			
 		</div>
+	</div>
+	<div class="w3-top">
+		<ol>
+			<a href="../week1/hello.html">
+				<li>
+					<p><em>Hello World Program</em></p>
+				</li>
+			</a>
+			<a href="../Team-01/assignments/main.html">
+				<li>
+					<p><em>Team Exercise: jquery, bootstrap, changing colors programatically.</em>Assignment: Personal Introduction</p>
+				</li>
+			</a>
+			<a href="./prove03">
+				<li>
+					<p><em>Prove 03 Shopping Cart</em></p>
+				</li>
+			</a>
+		</ol>
+	</div>
 </body>
 
 </html>
