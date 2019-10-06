@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="author" content="Shalom Sims">
-	<link rel="stylesheet" href="assignments.css">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 	<title>Shalom in the Home</title>
 </head>
 
@@ -20,7 +20,7 @@
 						<p><em>Hello World Program</em></p>
 					</li>
 				</a>
-				<a href="../week2">
+				<a href="../hello.html">
 					<li>
 						<p><em>Team Exercise: jquery, bootstrap, changing colors programatically.</em>Assignment: Personal Introduction</p>
 					</li>
