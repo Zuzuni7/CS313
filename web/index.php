@@ -6,7 +6,6 @@
 		<title>Shalom Home</title>
 	</head>
 	<body>
-		<?php include 'shared/header.php';?>
 		<div class="page-container">
 			<a href="./assignments/prove02/homepage.html">
 				<div class="content-wrap top-space">
@@ -17,7 +16,6 @@
 						<p class="card-text">Assignments</p>
 					</a>
 				</div>
-			<?php include 'shared/footer.php';?>
 		</div>
 	</body>
 </html>
