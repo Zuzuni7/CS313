@@ -20,20 +20,16 @@
 						<p><em>Hello World Program</em></p>
 					</li>
 				</a>
-				<a href="../hello.html">
+				<a href="../Team-01/assignments/main.html">
 					<li>
 						<p><em>Team Exercise: jquery, bootstrap, changing colors programatically.</em>Assignment: Personal Introduction</p>
 					</li>
 				</a>
-				<li>
-					<p><a href="../week3"><em>Team Exercise: PHP Form</em></a><a href="../week3/shopping.php">Shopping Cart</a></p>
-				</li>
-				<li>
-					<p><a href="../week4/sql.php"><em>SQL Team Activty</em></a>Personal DB Creation is found in the db folder.</p>
-				</li></a>
-				<li>
-					<p><a href="../week5"><em>Team Activity: SQL Scriptures</em></a>Personal DB Creation is found in the db folder.</p>
-				</li></a>
+				<a href="./prove03">
+					<li>
+						<p><em>Prove 03 Shopping Cart</em></p>
+					</li>
+				</a>
 			</ol>
 		</div>
 		<?php include '../shared/footer.php'; ?>
