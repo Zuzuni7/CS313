@@ -8,12 +8,12 @@
 	<body>
 		<?php include 'shared/header.php';?>
 		<div class="page-container">
-			<a href="assignments/assignments.php">
+			<a href="./assignments/prove02/homepage.html">
 				<div class="content-wrap top-space">
 					<p class="card-text">About Me</p></a>
 				</div>
 				<div class="col">
-					<a href="">
+					<a href="assignments/assignments.php">
 						<p class="card-text">Assignments</p>
 					</a>
 				</div>
