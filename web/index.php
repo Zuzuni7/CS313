@@ -2,7 +2,6 @@
 <html lang="en-us">
 	<head>
 		<meta charset="utf-8">
-		<meta name="author" content="Nathan Birch">
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 		<link rel="stylesheet" href="primary.css">
 		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
@@ -17,11 +16,11 @@
 				<div class="container">
 				  <div class="row">
 				    <div class="col">
-						<a href="week2/birchIntro.php">
+						<a href="assignments/prove02/homepage.html">
 							<div class="card" >
 								<img class="card-img-top" src="files/f1.jpg" alt="Card image cap">
 								<div class="card-body">
-							    	<p class="card-text">Nathan Birch Intro</p>
+							    	<p class="card-text">About Me</p>
 								</div>		
 							</div>
 						</a>
