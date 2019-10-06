@@ -6,6 +6,7 @@
 		<title>Shalom Home</title>
 	</head>
 	<body>
+		<h1>Homepage</h1>
 		<div class="page-container">
 			<a href="./assignments/prove02/homepage.html">
 				<div class="content-wrap top-space">
