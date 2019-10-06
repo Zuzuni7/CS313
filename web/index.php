@@ -8,26 +8,15 @@
 	<body>
 		<?php include 'shared/header.php';?>
 		<div class="page-container">
-		<a href="assignments/assignments.php">
-			<div class="content-wrap top-space">
-				<div class="container">
-				  <div class="row">
-				    <div class="col">
-							<div class="card" >
-								<div class="card-body">
-							    	<p class="card-text">About Me</p>
-								</div>		
-							</div>
-						</a>
-				    </div>
-				    <div class="col">
-						
-							<p class="card-text">Assignments</p>
-						</a>
-				    </div>
-				  </div>
+			<a href="assignments/assignments.php">
+				<div class="content-wrap top-space">
+					<p class="card-text">About Me</p></a>
 				</div>
-			</div>
+				<div class="col">
+					<a href="">
+						<p class="card-text">Assignments</p>
+					</a>
+				</div>
 			<?php include 'shared/footer.php';?>
 		</div>
 	</body>
