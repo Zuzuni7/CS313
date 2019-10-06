@@ -7,5 +7,5 @@
 			   height:40px; 
 			   line-height:40px;
                z-index:1000">
-	<p>CS 313 Birch Project</p>
+	<p>CS 313 Sims Project</p>
 </header>
