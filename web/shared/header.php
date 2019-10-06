@@ -4,7 +4,7 @@
 			   background-color: #FFA500;
 			   color:black;
 			   text-align:center;
-			   height:100px; 
+			   height:50px; 
 			   line-height:100px;
 			   font: bold italic 20px garamond">
 	<p>CS 313 Sims Project</p>
