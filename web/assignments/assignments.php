@@ -35,7 +35,7 @@
 					<p><em>Team Exercise: jquery, bootstrap, changing colors programatically.</em>Assignment: Personal Introduction</p>
 				</li>
 			</a>
-			<a href="./prove03">
+			<a href="./prove03/main.php">
 				<li>
 					<p><em>Prove 03 Shopping Cart</em></p>
 				</li>
