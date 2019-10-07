@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" href="assign03stylesheet.css" />
+    <link rel="stylesheet" href="style.css" />
 </head>
 <style>
     p.footer {
