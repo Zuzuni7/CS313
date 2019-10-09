@@ -1,0 +1,63 @@
+
+a:link {
+    color: blue;
+}
+
+a:visited {
+    color: black;
+}
+
+a:hover {
+    color: darkred;
+    text-decoration: underline;
+}
+
+a:active {
+    color: blue;
+}
+
+.center {
+    margin: auto;
+    width: 50%;
+    padding: 20px;
+}
+
+div.relative {
+    display: block;
+    align-content: center;
+    width: 500px;
+    color: black;
+    position: relative;
+    border: 2px groove gray;
+    background-color: whitesmoke;
+}
+
+div.sticky {
+    position: sticky;
+    top: auto;
+    background-color: transparent;
+    width: 500px;
+}
+
+body {
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+#object-position-1 {
+    object-position: 0px;
+}
+
+#object-position-2 {
+    object-position: 100% 10%;
+}
+
+img.a {
+    width: 75%;
+    height: 75%;
+    object-fit: none;
+    object-position: 5px 50%;
+    border: 5px solid red;
+    float: right;
+}
+

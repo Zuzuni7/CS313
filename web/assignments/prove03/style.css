@@ -1,13 +1,13 @@
 body{
     margin: auto;
   width: 50%;
-  border: 3px solid green;
+  border: 3px;
   padding: 10px;
-  background-repeat: no-repeat;
-  background-size: 100%; 
+  background-size: 150% 100%; 
 }
 
 .items {
     display: flex;
 
 }
+

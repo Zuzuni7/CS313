@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="assign03stylesheet.css" />
 </head>
 <style>
     p.footer {
@@ -24,7 +24,7 @@
     </header>
 
     <body background="assign03/bg2.jpg" class="center">
-        
+        <div class="">
         <div class="relative" ; text-align: left">
             <a href="bikelisting.html" style="font: bold 20px century ">  See Our Inventory </a>
         </div>
@@ -46,7 +46,7 @@
                 </br>
                 <em style="font: bold 18px; text-decoration-line: underline"> About us </em>
                 </br>
-                Founded in 2018 by Shalom Sims, Rodie's Inc. is
+                Founded in 2018 by Shalom Sims, Roadie's Inc. is
                 a small company based out of local Rexburg, ID. The company was founded to
                 cater to the needs of the many biking students on the campus of BYU-Idaho
                 and the sightseers who explore the back-roads of Idaho. The company specializes
@@ -66,17 +66,48 @@
         </div>
         </br>
         </br>
+        <!--Add Items for sale-->
+        
+        <form action="cart.php" method="get">
+        <div class="sticky">
+                <table style="width: 75%">
+                    <tr style="font: bold 20px courier">
+                        <th>Products</th>
+                        <th>In stock</th>
+                        <th>Amount</th>
+                        <th>Price</th>
+                    </tr>
+                    <tr>
+                        <th>
+                        <p><input type="checkbox" name="tires">Tires 27x1.25</p>
+                        </th>
+                        <th><input type="number" name="numTires" min="1" max="10" placeholder="1"></th>
+                        <th> Yes </th>
+                        <th>$45.00</th>
+                    </tr>
+                    <tr>
+                        <th>
+                            <p><input type="checkbox" name="tubes"> Inner Tubes. OneWay(Presta) </p>
+                        </th>
+                        <th><input type="number" name="numTubes" min="1" max="10" placeholder="1"></th>
+                        <th>Yes</th>
+                        <th>$10.00</th>
+                    </tr>
+                    <tr>
+                        <th>
+                            <p><input type="checkbox" name="brakes">Brake Shoes </p>
+                        </th>
+                        <th><input type="number" name="numBrakes" min="1" max="10" placeholder="1"></th>
+                        <th> Yes </th>
+                        <th> $12.00 </th>
+                    </tr>
+                </table>
+            </div>
+            <button type="submit">Checkout</button>
+            </form>
 
-        <div class="img.a">
-            <a href="bikelisting.html"> Classic Bike Parts</a>
-            <img class="left" src="assign03/bikedeco2.jpg" />
 
-        </div>
-
-        <div class="img.a">
-            <img src="assign03/bikedeco4.jpg" />
-        </div>
-
+    </div>
         <div class="relative" style="background-color: black">
             <p style="color: white; font: 15px century">
                 LOCATION
@@ -110,9 +141,3 @@
         </div>
     </footer>
 </html>
-
-<!clip images of bike tire>
-<!>
-<!>
-<!>
-<!>
