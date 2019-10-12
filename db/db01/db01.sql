@@ -1,3 +1,5 @@
+\i cleanup.sql
+
 CREATE TABLE users 
 ( user_id           INTEGER         PRIMARY KEY
 , username          VARCHAR(30)     NOT NULL   
@@ -46,18 +48,18 @@ INSERT INTO conferences
 ) 
 VALUES 
 ( conferences_n1.NEXTVAL
-, 
-, 
+, speakers_n1.CURRVAL
+, SYSDATE
 );
-INSERT INTO talks (talk_id, conference_id, speaker_id) VALUES ();
+--INSERT INTO talks (talk_id, conference_id, speaker_id) VALUES ();
 
-INSERT INTO notes 
-( note_id
-, user_id
-, talk_id
-, note_content
-)
-VALUES
-{ notes_n1.NEXTVAL
-, 
-}
+-- INSERT INTO notes 
+-- ( note_id
+-- , user_id
+-- , talk_id
+-- , note_content
+-- )
+-- VALUES
+-- { notes_n1.NEXTVAL
+-- , 
+-- }
