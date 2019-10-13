@@ -38,7 +38,7 @@ CREATE TABLE daily_entry
 , entry_type VARCHAR(10) NOT NULL
 , entry_text VARCHAR(1000) NOT NULL
 , title VARCHAR(100) NOT NULL
-, created_date DATE NOT NULL
+, created_date TIMESTAMP DEFAULT now()
 );
 
 \i insert.sql
