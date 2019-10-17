@@ -30,7 +30,7 @@
 					<p><em>Hello World Program</em></p>
 				</li>
 			</a>
-			<a href="./Team-01/assignments/main.html">
+			<a href="../../Team-01/assignments/main.php">
 				<li>
 					<p><em>Team Exercise: jquery, bootstrap, changing colors programatically.</em>Assignment: Personal Introduction</p>
 				</li>
