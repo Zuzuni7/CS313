@@ -11,4 +11,4 @@ INSERT INTO daily_entry(user_id, entry_type, entry_text, title) VALUES((SELECT u
 
 
 
-SELECT u.username, de.user_id, de.entry_type, de.entry_text FROM daily_entry de JOIN user_ u ON u.username = 'shalomsims';
+SELECT u.username,u.user_password, de.user_id, de.entry_type, de.title, de.entry_text FROM daily_entry de JOIN user_ u ON u.username = 'shalomsims';

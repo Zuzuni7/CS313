@@ -42,17 +42,17 @@
 
                 company that specializes in catering to  those brave souls who traverse
                 these car-dominated roads with their two-wheeled chariots!
-                </br>
-                </br>
+                <br/>
+                <br/>
                 <em style="font: bold 18px; text-decoration-line: underline"> About us </em>
-                </br>
+                <br/>
                 Founded in 2018 by Shalom Sims, Roadie's Inc. is
                 a small company based out of local Rexburg, ID. The company was founded to
                 cater to the needs of the many biking students on the campus of BYU-Idaho
                 and the sightseers who explore the back-roads of Idaho. The company specializes
                 in older roadbike designs but is also open to newer high speed bike builds. 
-                </br>
-                </br>
+                <br/>
+                <br/>
                 <div style="text-align: center">
                     <em style="font: bold 15px century; text-align: center">
                         "Be who you are and say what you feel, because those who mind don't matter, 
