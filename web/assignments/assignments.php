@@ -40,7 +40,7 @@
 					<p><em>Prove 03 Shopping Cart</em></p>
 				</li>
 			</a>
-			<a href="./../week05/home.php">
+			<a href="../week05/home.php">
 				<li>
 					<p><em>Prove 05</em></p>
 				</li>
