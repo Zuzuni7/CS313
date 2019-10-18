@@ -42,7 +42,7 @@
 			</a>
 			<a href="./../week05/home.php">
 				<li>
-					<p><em>Prove 03 Shopping Cart</em></p>
+					<p><em>Prove 05</em></p>
 				</li>
 			</a>
 		</ol>
