@@ -32,7 +32,7 @@
 			</a>
 			<a href="./../Team-01/assignments/main.php">
 				<li>
-					<p><em>Team Exercise: jquery, bootstrap, changing colors programatically.</em>Assignment: Personal Introduction</p>
+					<p><em>Team </em>Assignment: Personal Introduction</p>
 				</li>
 			</a>
 			<a href="./prove03/main.php">
