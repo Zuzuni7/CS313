@@ -1,4 +1,6 @@
 <?php
+$page = "assign05";
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,5 +15,3 @@
 
 </body>
 </html>
-
-?>
