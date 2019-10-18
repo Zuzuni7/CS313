@@ -30,12 +30,17 @@
 					<p><em>Hello World Program</em></p>
 				</li>
 			</a>
-			<a href="../../Team-01/assignments/main.php">
+			<a href="./../Team-01/assignments/main.php">
 				<li>
 					<p><em>Team Exercise: jquery, bootstrap, changing colors programatically.</em>Assignment: Personal Introduction</p>
 				</li>
 			</a>
 			<a href="./prove03/main.php">
+				<li>
+					<p><em>Prove 03 Shopping Cart</em></p>
+				</li>
+			</a>
+			<a href="./../week05/home.php">
 				<li>
 					<p><em>Prove 03 Shopping Cart</em></p>
 				</li>
