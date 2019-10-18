@@ -1,4 +1,6 @@
-<!DOCTYPE HTML>
+<?php 
+$page = "home";
+?>
 <html lang="en-us">
 
 <head>
