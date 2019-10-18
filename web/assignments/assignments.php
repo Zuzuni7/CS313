@@ -32,7 +32,7 @@ $page = "home";
 					<p><em>Hello World Program</em></p>
 				</li>
 			</a>
-			<a href="./../Team-01/assignments/main.php">
+			<a href="../../Team-01/assignments/main.php">
 				<li>
 					<p><em>Team </em>Assignment: Personal Introduction</p>
 				</li>
