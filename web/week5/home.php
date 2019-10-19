@@ -1,5 +1,6 @@
 <?php
 $page = "assign05";
+require 'dbConnect.php'
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -11,7 +12,11 @@ $page = "assign05";
 </head>
 <body>
     <h1>Homepage</h1>
+    <?php
 
+    foreach ($db->query(''))
+
+    ?>
 
 </body>
 </html>

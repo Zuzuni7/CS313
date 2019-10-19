@@ -25,14 +25,14 @@ $page = "home";
 			
 		</div>
 	</div>
-	<div class="w3-top">
+	<div class="top">
 		<ol>
 			<a href="../week1/hello.html">
 				<li>
 					<p><em>Hello World Program</em></p>
 				</li>
 			</a>
-			<a href="../../Team-01/assignments/main.php">
+			<a href="../../team.php">
 				<li>
 					<p><em>Team </em>Assignment: Personal Introduction</p>
 				</li>
