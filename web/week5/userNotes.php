@@ -12,7 +12,7 @@ include 'dbConnect.php';
 </head>
 <body>
 <?php
-
+echo "<h1>User Notes!</h1>";
 //how would I pass the user name to this file?? $username with a php form?
 $username = $_POST["username"];
 
