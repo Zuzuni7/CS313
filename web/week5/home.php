@@ -13,7 +13,7 @@ require 'dbConnect.php';
     <h1>Homepage</h1>
     <?php
 
-    foreach ($db->query(''))
+    //foreach ($db->query(''))
 
     ?>
 
