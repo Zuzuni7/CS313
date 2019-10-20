@@ -1,6 +1,5 @@
 <?php
-$page = "assign05";
-require 'dbConnect.php'
+require 'dbConnect.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
