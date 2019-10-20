@@ -13,7 +13,7 @@ require 'dbConnect.php';
     <h1>Homepage</h1>
     <?php
 
-    foreach ($db->query('SELECT u.username, de.user_id, de.entry_type, de.title, de.entry_text FROM daily_entry de JOIN user_ u ON u.user_id = de.user_id;')){
+    foreach ($db->query('SELECT u.username, de.user_id, de.entry_type, de.title, de.entry_text FROM daily_entry de JOIN user_ u ON u.user_id = de.user_id;') as $row){
         $user = $row['username'];
         $userId = $row['user_id'];
         $entryType = $row['entry_type'];
