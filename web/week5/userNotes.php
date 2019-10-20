@@ -14,7 +14,7 @@ include 'dbConnect.php';
 <?php
 
 //how would I pass the user name to this file?? $username with a php form?
-$username = $_GET["username"];
+$username = $_POST["username"];
 
 $query = "SELECT de.entry_text FROM daily_entry de JOIN user_ u ON u.user_id = $username";
 
