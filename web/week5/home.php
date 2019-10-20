@@ -11,6 +11,12 @@ require 'dbConnect.php';
 </head>
 <body>
     <h1>Reminisce: Homepage(For now)</h1>
+    <form action="userNotes.php" method="post">
+    Input your username: <input type="text" name="username" id="username" placeholder="Username">
+    <br />
+    <input type="submit" value="Search">
+</form>
+
     <?php
 
     foreach ($db->query('SELECT u.username, de.user_id, de.entry_type, de.title, de.entry_text FROM daily_entry de JOIN user_ u ON u.user_id = de.user_id;') as $row){
