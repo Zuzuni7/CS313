@@ -21,7 +21,7 @@ require 'dbConnect.php';
         $text = $row['entry_text'];
 
         echo "<p>$User Entries </p>";
-        echo "<a href='userNotes.php'>";
+        echo "<a href='userNotes.php'>User Entries</a>";
 
         echo "<p>Username: $user</p>";
         echo "<p>Account Number: $userId </p>";
