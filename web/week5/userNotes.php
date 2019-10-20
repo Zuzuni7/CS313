@@ -18,7 +18,7 @@ $username = $_GET["username"];
 
 foreach ($db->query('SELECT de.entry_text FROM daily_entry de JOIN user_ u ON u.user_id = $username;') as $row){
     $text = $row['entry_text'];
-    echo "<p>Username: $username</p>"
+    echo "<p>Username: $username</p>";
     echo "<p>What happened? $text </p>";
     echo "<br/><br/>";
 }
