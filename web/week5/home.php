@@ -7,10 +7,10 @@ require 'dbConnect.php';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>HOMEPAGE</title>
+    <title>Reminisce</title>
 </head>
 <body>
-    <h1>Homepage</h1>
+    <h1>Reminisce: Homepage(For now)</h1>
     <?php
 
     foreach ($db->query('SELECT u.username, de.user_id, de.entry_type, de.title, de.entry_text FROM daily_entry de JOIN user_ u ON u.user_id = de.user_id;') as $row){
