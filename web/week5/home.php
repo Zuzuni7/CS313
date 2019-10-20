@@ -25,7 +25,7 @@ require 'dbConnect.php';
         echo "<p>Entry Title: $title</p>";
         echo "<p>How was your day? $entryType</p>";
         echo "<p>What happened? $text </p>";
-        echo "<br/><br/>"
+        echo "<br/><br/>";
     }
 
     ?>
