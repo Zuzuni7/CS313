@@ -20,16 +20,12 @@ require 'dbConnect.php';
         $title = $row['title'];
         $text = $row['entry_text'];
 
-        //echo "<p><a href="userNotes.php;"></a> Entries of $user </p>";
-
         echo "<p>Username: $user</p>";
         echo "<p>Account Number: $userId </p>";
         echo "<p>Entry Title: $title</p>";
         echo "<p>How was your day? $entryType</p>";
         echo "<p>What happened? $text </p>";
-        <br/>
-        <br/>
-        <br/>
+        echo "<br/><br/>"
     }
 
     ?>
