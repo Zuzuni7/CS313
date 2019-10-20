@@ -3,6 +3,7 @@
 -- DROP TABLE good;
 DROP TABLE daily_entry;
 DROP TABLE user_;
+DROP TABLE quote;
 
 --DROP SEQUENCE IF EXISTS quote_s1;
 --DROP SEQUENCE IF EXISTS meh_s1;
