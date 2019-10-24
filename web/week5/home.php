@@ -15,7 +15,7 @@ require 'dbConnect.php';
     Input your username: <input type="text" name="username" id="username" placeholder="Username">
     <br />
     <input type="submit" value="Search">
-</form>
+    </form>
 
     <?php
 
