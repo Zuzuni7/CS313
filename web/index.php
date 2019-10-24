@@ -2,7 +2,7 @@
 <html lang="en-us">
 	<head>
 		<meta charset="utf-8">
-		<link rel="stylesheet" href="../bootstrap-4.3.1-dist/bootstrap-4.3.1-dist/css/bootstrap.css">
+		<link rel="stylesheet" href="../bootstrap-4.3.1-dist/css/bootstrap.css">
 		<title>Shalom Home</title>
 	</head>
 	<body>
