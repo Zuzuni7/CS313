@@ -50,7 +50,7 @@ $page = "home";
 			</a>
 			<a href="../week6/home.php">
 				<li>
-					<p><em>Prove 05</em></p>
+					<p><em>Prove 06</em></p>
 				</li>
 			</a>
 		</ol>
