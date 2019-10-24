@@ -12,12 +12,13 @@ require 'dbConnect.php';
 </head>
 <body>
     <h1>Reminisce: Homepage</h1>
-    <form action="userNotes.php" method="post">
-    Input your username: <input type="text" name="username" id="username" placeholder="Username">
-    <br />
-    <input type="submit" value="Search">
-    </form>
-
+    <div>
+        <form action="userNotes.php" method="post">
+        Input your username: <input type="text" name="username" id="username" placeholder="Username">
+        <br />
+        <input type="submit" value="Search">
+        </form>
+    </div>
     <?php
 
     foreach ($db->query('SELECT u.username, de.user_id, de.entry_type, de.title, de.entry_text FROM daily_entry de JOIN user_ u ON u.user_id = de.user_id;') as $row){
@@ -29,7 +30,7 @@ require 'dbConnect.php';
         
         echo "<p>$User Entry #$userId </p>";
         echo "<a href='userNotes.php'>User Entries</a>";
-
+        
         echo "<p>Username: $user</p>";
         echo "<p>Account Number: $userId </p>";
         echo "<p>Entry Title: $title</p>";

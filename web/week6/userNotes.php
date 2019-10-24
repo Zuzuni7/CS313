@@ -22,6 +22,21 @@ $query = "SELECT de.entry_text, u.username FROM daily_entry de JOIN user_ u ON u
 foreach ($db->query($query) as $row){
     $text = $row['entry_text'];
     $username = $row['username'];
+
+    ?>
+    <div class="card">
+        <div class="card-header">
+            Quote
+        </div>
+        <div class="card-body">
+            <blockquote class="blockquote mb-0">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+            <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
+            </blockquote>
+        </div>
+    </div>
+    <?php
+
     echo "<p>Username: $username</p>";
     echo "<p>What happened? $text </p>";
     echo "<br/><br/>";
