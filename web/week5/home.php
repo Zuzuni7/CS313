@@ -26,8 +26,8 @@ require 'dbConnect.php';
         $entryType = $row['entry_type'];
         $title = $row['title'];
         $text = $row['entry_text'];
-
-        echo "<p>$User Entries </p>";
+        
+        echo "<p>$User Entry #$userId </p>";
         echo "<a href='userNotes.php'>User Entries</a>";
 
         echo "<p>Username: $user</p>";
