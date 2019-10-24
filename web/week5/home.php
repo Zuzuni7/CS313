@@ -7,7 +7,8 @@ require 'dbConnect.php';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Reminisce</title>
+    <link rel="stylesheet" href="../bootstrap-4.3.1-dist/css/bootstrap.css">
+	<title>Reminisce</title>
 </head>
 <body>
     <h1>Reminisce: Homepage(For now)</h1>
