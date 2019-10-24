@@ -11,7 +11,7 @@ require 'dbConnect.php';
 	<title>Reminisce</title>
 </head>
 <body>
-    <h1>Reminisce: Homepage(For now)</h1>
+    <h1>Reminisce: Homepage</h1>
     <form action="userNotes.php" method="post">
     Input your username: <input type="text" name="username" id="username" placeholder="Username">
     <br />
