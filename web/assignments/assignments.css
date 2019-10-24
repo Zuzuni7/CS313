@@ -1,4 +1,12 @@
 /* LIST #2 */
+body, html {
+  height: 100%;
+}
+
+.bg {
+  background-image: url("../images/wood.png");
+}
+
 #list2 { 
   width:320px; 
 }
