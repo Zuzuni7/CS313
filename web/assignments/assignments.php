@@ -48,6 +48,11 @@ $page = "home";
 					<p><em>Prove 05</em></p>
 				</li>
 			</a>
+			<a href="../week6/home.php">
+				<li>
+					<p><em>Prove 05</em></p>
+				</li>
+			</a>
 		</ol>
 	</div>
 </body>
