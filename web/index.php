@@ -17,7 +17,7 @@
 					</div>
 				</a>
 				<a href="assignments/assignments.php">
-					<div class="content-wrap bottom-space">
+					<div class="content-wrap top-space">
 						<p class="card-text">Assignments</p>
 					</div>
 				</a>
