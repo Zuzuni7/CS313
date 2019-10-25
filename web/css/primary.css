@@ -4,7 +4,7 @@ body {
   background-size: 100%;
 }
 .page-container {
-  min-height: 100vh;
+  min-height: 50vh;
   margin: auto;
   width: 100%;
   padding: 10px;
