@@ -8,20 +8,19 @@
 		<title>Shalom Home</title>
 	</head>
 	<body>
-		
 		<div class="page-container">
-		<div class="topnav">
-		<h1>Homepage</h1>
-			<a href="./assignments/prove02/homepage.html">
-				<div class="content-wrap top-space">
-					<p class="card-text">About Me</p>
-				</div>
-			</a>
-			<div class="col">
-				<a href="assignments/assignments.php">
-					<p class="card-text">Assignments</p>
+			<div class="topnav">
+				<h1>Homepage</h1>
+				<a href="./assignments/prove02/homepage.html">
+					<div class="content-wrap top-space">
+						<p class="card-text">About Me</p>
+					</div>
 				</a>
-			</div>
+				<a href="assignments/assignments.php">
+					<div class="content-wrap bottom-space">
+						<p class="card-text">Assignments</p>
+					</div>
+				</a>
 			</div>
 		</div>
 	</body>
