@@ -19,10 +19,9 @@
         if (isset($_POST['username']) && isset($_POST['password'])) {
             $username = $_POST['username'];
             $stmt = $db->prepare("SELECT * FROM user_ WHERE username = :username");
-            
             $stmt->bindValue(':username', $username);
-            echo "<p>Im here pre obj fetch</p>";
             $stmt->execute();
+            echo "<p>Im here pre obj fetch</p>";
             $result = $stmt->get_result();
             $user = $result->fetch_object();
 
