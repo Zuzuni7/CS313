@@ -17,12 +17,12 @@
 
     if(!empty($_POST)) {
          if (isset($_POST['username']) && isset($_POST['password'])) {
-    //         $username = $_POST['username'];
-    //         $stmt = $db->prepare("SELECT * FROM user_ WHERE username = :username");
-    //         $stmt->bindValue(':username', $username);
-    //         $stmt->execute();
-    //         $result = $stmt->get_result();
-    //         $user = $result->fetch_object();
+            $username = $_POST['username'];
+            $stmt = $db->prepare("SELECT * FROM user_ WHERE username = :username");
+            $stmt->bindValue(':username', $username);
+            $stmt->execute();
+            $result = $stmt->get_result();
+            $user = $result->fetch_object();
 
     //         while ($row = $statement->fetch(PDO::FETCH_ASSOC))
     // 		{
