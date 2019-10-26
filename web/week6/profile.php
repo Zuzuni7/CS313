@@ -7,6 +7,10 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <h1>Profile</h1>
+
+    <?php
+        echo "<p>oh boi</p>";
+    ?>
 </body>
 </html>
