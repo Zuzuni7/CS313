@@ -1,6 +1,6 @@
 
 
-\i ../db/delete.sql
+\i db/delete.sql
 
 CREATE TABLE user_
 ( user_id SERIAL NOT NULL PRIMARY KEY
@@ -22,4 +22,4 @@ CREATE TABLE quote
 , quote_text VARCHAR(250)
 );
 
-\i ../db/insert.sql
+\i db/insert.sql
