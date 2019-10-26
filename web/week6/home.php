@@ -1,9 +1,9 @@
 <?php
 require 'dbConnect.php';
 include('login.php');
-if (isset($_SESSION['login_user'])){
-    header("location: profile.php");
-}
+// if (isset($_SESSION['login_user'])){
+//     header("location: profile.php");
+// }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -17,7 +17,7 @@ if (isset($_SESSION['login_user'])){
 <body>
     <h1>Reminisce: Homepage</h1>
     <div>
-        <form action="" method="post">
+        <form action="login.php" method="post">
             <input type="text" name="username" placeholder="Enter your username" required>
             <input type="password" name="password" placeholder="Enter your password" required>
             <input type="submit" name="submit" value="Submit">
