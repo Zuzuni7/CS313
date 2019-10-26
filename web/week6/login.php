@@ -15,13 +15,15 @@
     <?php
     
 
-    if(!empty($_POST)) {
-        if (isset($_POST['username']) && isset($_POST['password'])) {
+    if(!empty($_POST)) 
+    {
+        if (isset($_POST['username']) && isset($_POST['password'])) 
+        {
             $username = $_POST['username'];
             $password = $_POST['password'];
-            $stmt = $db->prepare("SELECT * FROM user_ WHERE username = :username AND user_password = :password");
+            $stmt = $db->prepare("SELECT * FROM user_ WHERE username = :username AND user_password = :passwrd");
             $stmt->bindValue(':username', $username);
-            $stmt->bindValue(':password', $password);
+            $stmt->bindValue(':passwrd', $password);
             $stmt->execute();
 
             while ($row = $stmt->fetch(PDO::FETCH_ASSOC))
