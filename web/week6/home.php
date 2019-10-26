@@ -12,11 +12,12 @@ if (isset($_SESSION['login_user'])){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="../bootstrap-4.3.1-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="primary.css">
 	<title>Reminisce</title>
 </head>
 <body>
     <h1>Reminisce: Homepage</h1>
-    <div>
+    <div class="page-container">
         <form action="login.php" method="post">
             <div class="form-group row">
                 <div class="col-sm-10">
