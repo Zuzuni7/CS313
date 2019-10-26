@@ -24,6 +24,8 @@
             $result = $stmt->get_result();
             $user = $result->fetch_object();
 
+            echo "Im here";
+
             while ($row = $statement->fetch(PDO::FETCH_ASSOC))
      		{
                  $user_id = $row['user_id'];
