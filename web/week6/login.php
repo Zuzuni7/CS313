@@ -18,8 +18,10 @@
     if(!empty($_POST)) {
         if (isset($_POST['username']) && isset($_POST['password'])) {
             $username = $_POST['username'];
+            $password = $_POST['password'];
             $stmt = $db->prepare("SELECT * FROM user_ WHERE username = :username");
             $stmt->bindValue(':username', $username);
+            $stmt->bindValue(':password', $password);
             $stmt->execute();
 
             while ($row = $stmt->fetch(PDO::FETCH_ASSOC))
