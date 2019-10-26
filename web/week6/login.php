@@ -1,5 +1,5 @@
 <?php
-    require 'dbConnect.php';
+    //require 'dbConnect.php';
     $db = get_db();
 ?>
     <!DOCTYPE html>
@@ -11,6 +11,7 @@
         <title>Document</title>
     </head>
     <body>
+    <h1>Welcome<?php echo "$_POST['username'];"?><h1>
     <?php
     
 
