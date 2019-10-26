@@ -31,11 +31,11 @@
                  $password = $row['password']
                  echo "<p>$user_id "." $username "." $password</p>";
       
-                echo "<h1>$username and $user->password</h1>"
-                if($_POST['password'] = user.password){
-                    $_SESSION['user_id'] = $user->ID
-                    echo "<h1>$username and $user->password</h1>";
-                }
+                //echo "<h1>$username and $user->password</h1>"
+                //if($_POST['password'] = user.password){
+                //    $_SESSION['user_id'] = $user->ID
+                //    echo "<h1>$username and $user->password</h1>";
+                //}
             }
         }
         else 
