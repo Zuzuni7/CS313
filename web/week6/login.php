@@ -29,7 +29,7 @@
                 $password = $row['password'];
                 echo "<p>$user_id "." $username "." $password</p>";
 
-                if($_POST['password'] = $password)
+                if($_POST['password'] == $password)
                 {
                     $_SESSION['user_id'] = $user_id;
                     echo "<h1>$username and $user->password</h1>";
