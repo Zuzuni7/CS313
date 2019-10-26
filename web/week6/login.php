@@ -30,7 +30,7 @@
      		{
                 $user_id = $row['user_id'];
                 $username = $row['username'];
-                $pswd = $row['password'];
+                $pswd = $row['user_password'];
                 echo "<p>$user_id "." $username "." $pswd</p>";
 
                 if($pswd == $password)
