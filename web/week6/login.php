@@ -28,7 +28,7 @@
      		{
                  $user_id = $row['user_id'];
                  $username = $row['username'];
-                 $password = $row['password']
+                 $password = $row['password'];
                  echo "<p>$user_id "." $username "." $password</p>";
       
                 //echo "<h1>$username and $user->password</h1>"
