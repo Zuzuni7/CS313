@@ -21,24 +21,17 @@
             $stmt = $db->prepare("SELECT * FROM user_ WHERE username = :username");
             $stmt->bindValue(':username', $username);
             $stmt->execute();
-            echo "<p>Im here pre obj fetch</p>";
-            $result = $stmt->get_result();
-            $user = $result->fetch_object();
 
-            echo "<p>Im here post obj fetch</p>";
-
-            while ($row = $statement->fetch(PDO::FETCH_ASSOC))
+            while ($row = $stmt->fetch(PDO::FETCH_ASSOC))
      		{
-                 $user_id = $row['user_id'];
-                 $username = $row['username'];
-                 $password = $row['password'];
-                 echo "<p>$user_id "." $username "." $password</p>";
-      
-                echo "<h1>$username and $user->password</h1>";
+                $user_id = $row['user_id'];
+                $username = $row['username'];
+                $password = $row['password'];
+                echo "<p>$user_id "." $username "." $password</p>";
 
-                if($_POST['password'] = user.password)
+                if($_POST['password'] = $password)
                 {
-                    $_SESSION['user_id'] = $user->ID;
+                    $_SESSION['user_id'] = $user_id;
                     echo "<h1>$username and $user->password</h1>";
                 }
                 else
