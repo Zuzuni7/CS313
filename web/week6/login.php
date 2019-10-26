@@ -13,7 +13,8 @@
     <body>
     <h1>Welcome<h1>
     <?php
-    
+    session_start();
+    $e = '';
 
     if(!empty($_POST)) 
     {
@@ -35,23 +36,25 @@
 
                 if($pswd == $password)
                 {
-                    $_SESSION['user_id'] = $user_id;
-                    echo "<h1>$username and $password</h1>";
+                    $_SESSION['user_id'] = $username;
+                    header("location: profile.php");
+                    $db = get_db();
+                    //echo "<h1>$username and $password</h1>";
                 }
                 else
                 {
-                    echo "<p>Incorrect Password</p>";
+                    $e = "Incorrect Password.";
                 }
             }
         }
         else 
         {
-            echo "<p>You must fill out the entire form!</p>";
+            $e = "You must fill out the entire form.";
         }
     }
     else
     {
-        echo "<p>You must fill out the username!</p>";
+        $e = "You must fill out the entire form.";
     }
 ?>   
     </body>
