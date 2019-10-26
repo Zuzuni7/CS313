@@ -33,6 +33,8 @@ require 'dbConnect.php';
 
                 if($_POST['password'] = user.password){
                     $_SESSION['user_id'] = $user->ID;
+
+                    echo "<h1>$username and $user->password</h1>";
                 }
             }
         }
