@@ -34,7 +34,7 @@
                 if($_POST['password'] == $password)
                 {
                     $_SESSION['user_id'] = $user_id;
-                    echo "<h1>$username and $user->password</h1>";
+                    echo "<h1>$username and $password</h1>";
                 }
                 else
                 {
