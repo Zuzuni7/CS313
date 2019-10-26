@@ -31,6 +31,8 @@ require 'dbConnect.php';
                 $result =$stmt->get_result();
                 $user = $result->fetch_object();
 
+                echo "<h1>$username and $user->password</h1>";
+                
                 if($_POST['password'] = user.password){
                     $_SESSION['user_id'] = $user->ID;
 
