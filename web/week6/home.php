@@ -48,6 +48,11 @@ require 'dbConnect.php';
                     echo "<h1>$username and $user->password</h1>";
                 }
             }
+            else {
+                echo "<p>You must fill out the entire form!</p>";
+            }
+        }else{
+            echo "<p>You must fill out the username!</p>";
         }
     ?>
 
