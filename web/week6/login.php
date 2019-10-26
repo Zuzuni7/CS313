@@ -19,12 +19,13 @@
         if (isset($_POST['username']) && isset($_POST['password'])) {
             $username = $_POST['username'];
             $stmt = $db->prepare("SELECT * FROM user_ WHERE username = :username");
+            echo "<p>Im here pre obj fetch</p>";
             $stmt->bindValue(':username', $username);
             $stmt->execute();
             $result = $stmt->get_result();
             $user = $result->fetch_object();
 
-            echo "Im here";
+            echo "<p>Im here post obj fetch</p>";
 
             while ($row = $statement->fetch(PDO::FETCH_ASSOC))
      		{
