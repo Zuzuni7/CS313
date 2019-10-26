@@ -13,32 +13,29 @@ require 'dbConnect.php';
 <body>
     <h1>Reminisce: Homepage</h1>
     <div>
-        <form action="userNotes.php" method="post">
-        Input your username: <input type="text" name="username" id="username" placeholder="Username">
-        <br />
-        <input type="submit" value="Search">
+        <form action="" method="post">
+            <input type="text" name="username" placeholder="Enter your username" required>
+            <input type="password" name="password" placeholder="Enter your password" required>
+            <input type="submit" value="Submit">
         </form>
     </div>
     <?php
+        session_start();
 
-    foreach ($db->query('SELECT u.username, de.user_id, de.entry_type, de.title, de.entry_text FROM daily_entry de JOIN user_ u ON u.user_id = de.user_id;') as $row){
-        $user = $row['username'];
-        $userId = $row['user_id'];
-        $entryType = $row['entry_type'];
-        $title = $row['title'];
-        $text = $row['entry_text'];
-        
-        echo "<p>$User Entry #$userId </p>";
-        echo "<a href='userNotes.php'>User Entries</a>";
-        
-        echo "<p>Username: $user</p>";
-        echo "<p>Account Number: $userId </p>";
-        echo "<p>Entry Title: $title</p>";
-        echo "<p>How was your day? $entryType</p>";
-        echo "<p>What happened? $text </p>";
-        echo "<br/><br/>";
-    }
+        if(!empty($_POST)) {
+            if (isset($_POST['username']) && isset($_POST['password'])) {
+                $username = $_POST['username'];
+                $stmt = $db->prepare("SELECT * FROM user_ WHERE username = :username");
+                $stmt->bindValue(':username', $username);
+                $stmt->execute();
+                $result =$stmt->get_result();
+                $user = $result->fetch_object();
 
+                if($_POST['password'] = user.password){
+                    $_SESSION['user_id'] = $user->ID;
+                }
+            }
+        }
     ?>
 
 </body>
