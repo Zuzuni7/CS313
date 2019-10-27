@@ -46,10 +46,10 @@ session_start();
                         //echo "<h1>$username and $password</h1>";
                         echo "<h2>Welcome $username! </h2>";
                         //echo "Password $password";
-
+                            
                         /*Load in user data*/
                         $query = '';
-                        foreach($db->query('SELECT title, entry_text, created_date FROM daily_entry WHERE user_id = (SELECT user_id FROM user_ WHERE username = $username') as $row)
+                        foreach($db->query('SELECT d.title, d.entry_text, d.created_date FROM daily_entry d WHERE d.user_id = (SELECT u.user_id FROM user_ u WHERE u.username = $username);') as $row)
                         {
                             $title = $row["title"]; 
                             $entry = $row["entry_text"]; 
