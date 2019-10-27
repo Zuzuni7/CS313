@@ -1,6 +1,7 @@
 <?php
 require 'dbConnect.php';
 //include('login.php');
+$db = get_db();
 if (isset($_SESSION['login_user'])){
     header("location: profile.php");
 }
@@ -29,7 +30,7 @@ session_start();
                 $stmt->bindValue(':username', $username);
                 $stmt->bindValue(':passwrd', $password);
                 $stmt->execute();
-    
+                echo "We just executed";
                 while ($row = $stmt->fetch(PDO::FETCH_ASSOC))
                  {
                     $user_id = $row['user_id'];
@@ -59,7 +60,7 @@ session_start();
         ?>
         </div>
         <div class="page-container">
-        <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post">
+        <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post" role="form">
             <div class="form-group row">
                 <div class="col-sm-10">
                     <input type="text" name="username" placeholder="Enter your username" required>
