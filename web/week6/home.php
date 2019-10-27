@@ -30,13 +30,13 @@ session_start();
                 $stmt->bindValue(':username', $username);
                 $stmt->bindValue(':passwrd', $password);
                 $stmt->execute();
-                echo "<p>We just executed</p>";
+                //echo "<p>We just executed</p>";
                 while ($row = $stmt->fetch(PDO::FETCH_ASSOC))
                  {
                     $user_id = $row['user_id'];
                     $username = $row['username'];
                     $pswd = $row['user_password'];
-                    echo "<p>$user_id "." $username "." $pswd</p>";
+                    //echo "<p>$user_id "." $username "." $pswd</p>";
     
                     if($pswd == $password)
                     {
@@ -44,12 +44,12 @@ session_start();
                         //header("location: profile.php");
                         //$db = get_db();
                         //echo "<h1>$username and $password</h1>";
-                        echo "Welcome $username! ";
-                        echo "Password $password";
+                        echo "<h2>Welcome $username! </h2>";
+                        //echo "Password $password";
 
                         /*Load in user data*/
-                        $query = 'SELECT title, entry_text, created_date FROM daily_entry WHERE user_id = (SELECT user_id FROM user_ WHERE username = $username';
-                        foreach($db->query($query) as $row)
+                        $query = '';
+                        foreach($db->query('SELECT title, entry_text, created_date FROM daily_entry WHERE user_id = (SELECT user_id FROM user_ WHERE username = $username') as $row)
                         {
                             $title = $row["title"]; 
                             $entry = $row["entry_text"]; 
