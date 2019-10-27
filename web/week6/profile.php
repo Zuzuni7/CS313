@@ -1,6 +1,7 @@
 <?php
 require('dbConnect.php');
 $db = get_db();
+$_SESSION["username"];
 ?>
 
 <!DOCTYPE html>
@@ -9,7 +10,7 @@ $db = get_db();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Profile Page</title>
 </head>
 <body>
 <?php
@@ -18,9 +19,8 @@ $db = get_db();
         while ($row = $stmt->fetch(PDO::FETCH_ASSOC))
         {
             $username = $row["username"];
-            echo "<p>$username</p>";
+            echo "<h1>Welcome $username!</h1>";
         }
 ?>
-    <h1>Welcome <?php echo"<h1>Hello</h1>"; ?></h1>
 </body>
 </html>
