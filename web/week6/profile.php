@@ -13,9 +13,14 @@ $db = get_db();
 </head>
 <body>
 <?php
-        $query = 'SELECT username FROM user_ WHERE username = "shalomsims"';
-        
-        echo "<p></p>";
+        $stmt = $db->prepare("SELECT username FROM user_ WHERE username = 'shalomsims'");
+        $stmt->bindValue(':username', $username);
+        $stmt->execute();
+        while ($row = $stmt->fetch(PDO::FETCH_ASSOC))
+        {
+            $username = $row["username"];
+            echo "<p>$username</p>";
+        }
 ?>
     <h1>Welcome <?php echo"<h1>Hello</h1>"; ?></h1>
 </body>
