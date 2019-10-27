@@ -1,3 +1,8 @@
+<?php
+require_once('dbConnect.php');
+$db = get_db();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,10 +12,10 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Profile</h1>
-
-    <?php
-        echo "<p>oh boi</p>";
-    ?>
+<?php
+        //$query = 'SELECT user'
+        echo "<p>$_SESSION["user_id"]</p>";
+?>
+    <h1>Welcome <?php echo"<h1></h1>"; ?></h1>
 </body>
 </html>
