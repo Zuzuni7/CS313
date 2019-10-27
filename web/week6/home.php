@@ -43,6 +43,8 @@ session_start();
                         header("location: profile.php");
                         $db = get_db();
                         //echo "<h1>$username and $password</h1>";
+                        echo "Welcome $username! ";
+                        echo "Password: $password $user_id";    
                     }
                     else
                     {
@@ -72,8 +74,8 @@ session_start();
             <span><?php echo $e; ?></span>
         </form>
         <?php
-            echo "Welcome $username!";
-            echo "Password: $password $user_id";    
+            // echo "Welcome $username!";
+            // echo "Password: $password $user_id";    
         ?>
     </div>
 
