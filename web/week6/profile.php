@@ -13,9 +13,10 @@ $db = get_db();
 </head>
 <body>
 <?php
-        //$query = 'SELECT user'
-        echo "<p>$_SESSION["user_id"]</p>";
+        $query = 'SELECT username FROM user_ WHERE username = "shalomsims"';
+        
+        echo "<p></p>";
 ?>
-    <h1>Welcome <?php echo"<h1></h1>"; ?></h1>
+    <h1>Welcome <?php echo"<h1>Hello</h1>"; ?></h1>
 </body>
 </html>
