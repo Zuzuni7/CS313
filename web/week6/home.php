@@ -30,7 +30,7 @@ session_start();
                 $stmt->bindValue(':username', $username);
                 $stmt->bindValue(':passwrd', $password);
                 $stmt->execute();
-                echo "We just executed";
+                echo "<p>We just executed</p>";
                 while ($row = $stmt->fetch(PDO::FETCH_ASSOC))
                  {
                     $user_id = $row['user_id'];
