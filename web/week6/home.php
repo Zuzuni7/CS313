@@ -50,7 +50,7 @@ session_start();
                         /*Load in user data*/
                         //$query = '';
                         
-                        $statement = $db->prepare('SELECT d.title, d.entry_text, d.created_date FROM daily_entry d WHERE d.user_id = (SELECT u.user_id FROM user_ u WHERE u.username = $username);')
+                        $statement = $db->prepare('SELECT d.title, d.entry_text, d.created_date FROM daily_entry d WHERE d.user_id = (SELECT u.user_id FROM user_ u WHERE u.username = $username);');
                         //$statement->bindValue(':username', $username);
                         //$statement->bindValue(':passwrd', $password);
                         $statement->execute();
