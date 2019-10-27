@@ -1,5 +1,5 @@
 <?php
-require_once('dbConnect.php');
+require('dbConnect.php');
 $db = get_db();
 ?>
 
@@ -14,7 +14,6 @@ $db = get_db();
 <body>
 <?php
         $stmt = $db->prepare("SELECT username FROM user_ WHERE username = 'shalomsims'");
-        $stmt->bindValue(':username', $username);
         $stmt->execute();
         while ($row = $stmt->fetch(PDO::FETCH_ASSOC))
         {
