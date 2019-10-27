@@ -52,7 +52,7 @@ session_start();
             }
             else 
             {
-                $e = "You must fill out the entire form.";
+                $e = "Please fill out the entire form.";
             }
         ?>
         </div>
@@ -71,6 +71,10 @@ session_start();
             <input type="submit" name="submit" value="Submit">
             <span><?php echo $e; ?></span>
         </form>
+        <?php
+            echo "Welcome $username!";
+            echo "Password: $password $user_id";    
+        ?>
     </div>
 
 </body>
