@@ -42,7 +42,7 @@ session_start();
                     {
                         $_SESSION['user_id'] = $username;
                         header("location: profile.php");
-                        $db = get_db();
+                        //$db = get_db();
                         //echo "<h1>$username and $password</h1>";
                         echo "Welcome $username! ";
                         echo "Password $password $user_id";
