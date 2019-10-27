@@ -45,7 +45,18 @@ session_start();
                         $db = get_db();
                         //echo "<h1>$username and $password</h1>";
                         echo "Welcome $username! ";
-                        echo "Password: $password $user_id";    
+                        echo "Password $password $user_id";
+
+                        /*Load in user data*/
+                        $query = 'SELECT title, entry_text, created_date FROM daily_entry WHERE user_id = (SELECT user_id FROM user_ WHERE username = $username';
+                        foreach($db->query($query) as $row)
+                        {
+                            $title = $row["title"]; 
+                            $entry = $row["entry_text"]; 
+                            $date = $row["created_date"];
+                            
+                            echo "<p>$title $date <br/> $entry </p>";
+                        }
                     }
                     else
                     {
