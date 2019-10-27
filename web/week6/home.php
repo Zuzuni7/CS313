@@ -41,7 +41,7 @@ session_start();
                     if($pswd == $password)
                     {
                         $_SESSION['user_id'] = $username;
-                        header("location: profile.php");
+                        //header("location: profile.php");
                         //$db = get_db();
                         //echo "<h1>$username and $password</h1>";
                         echo "Welcome $username! ";
