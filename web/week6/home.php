@@ -48,12 +48,18 @@ session_start();
                         //echo "Password $password";
                             
                         /*Load in user data*/
-                        $query = '';
-                        foreach($db->query('SELECT d.title, d.entry_text, d.created_date FROM daily_entry d WHERE d.user_id = (SELECT u.user_id FROM user_ u WHERE u.username = $username);') as $row)
+                        //$query = '';
+                        
+                        $statement = $db->prepare('SELECT d.title, d.entry_text, d.created_date FROM daily_entry d WHERE d.user_id = (SELECT u.user_id FROM user_ u WHERE u.username = $username);')
+                        //$statement->bindValue(':username', $username);
+                        //$statement->bindValue(':passwrd', $password);
+                        $statement->execute();
+                        //foreach($db->query('SELECT d.title, d.entry_text, d.created_date FROM daily_entry d WHERE d.user_id = (SELECT u.user_id FROM user_ u WHERE u.username = $username);') as $row)
+                        while($data = $statement->fetch(PDO::FETCH_ASSOC))
                         {
-                            $title = $row["title"]; 
-                            $entry = $row["entry_text"]; 
-                            $date = $row["created_date"];
+                            $title = $data["title"]; 
+                            $entry = $data["entry_text"]; 
+                            $date = $data["created_date"];
                             
                             echo "<p>$title $date <br/> $entry </p>";
                         }
