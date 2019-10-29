@@ -53,6 +53,11 @@ $page = "home";
 					<p><em>Prove 06</em></p>
 				</li>
 			</a>
+			<a href="../Team01/ta07/signup.php">
+				<li>
+					<p><em>Prove 06</em></p>
+				</li>
+			</a>
 		</ol>
 	</div>
 </body>
