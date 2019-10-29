@@ -24,7 +24,7 @@ if (isset($_SESSION['user_id'])){
     <div class="container">
         <div class="login">
             <form method="post" action="">
-                <p><input type="text" name="login" value="" placeholder="Username or Email"></p>
+                <p><input type="text" name="username" value="" placeholder="Username or Email"></p>
                 <p><input type="password" name="password" value="" placeholder="Password"></p>
                 <p class="remember_me">
                 <label>
