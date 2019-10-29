@@ -57,6 +57,12 @@ body {
   box-shadow: 0 1px whitesmoke;
 }
 
+.login h1 > em {
+    font: 12px;
+    font-weight: bolder;
+
+}
+
 .login p {
   margin: 20px 0 0;
 }
