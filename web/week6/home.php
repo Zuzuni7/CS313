@@ -23,7 +23,7 @@ if (isset($_SESSION['user_id'])){
     </style>
 </head>
 <body>
-    <h1 class="login">Reminisce: <em>"Remember Well"</em></h1>
+    <h1 class="login">Reminisce: <em style="font:10px">"Remember Well"</em></h1>
     <div class="container">
         <div class="login">
             <form method="post" action="login.php">
