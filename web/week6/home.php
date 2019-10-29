@@ -22,7 +22,7 @@ if (isset($_SESSION['user_id'])){
     <h1>Reminisce: <em>Remember Well</em></h1>
 
         <div class="page-container">
-        <!--<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>-->
+        
         <form action="login.php" method="post" role="form">
             <div class="form-group row">
                 <div class="col-sm-10">
@@ -62,5 +62,5 @@ if (isset($_SESSION['user_id'])){
 
 <!--
 \i ../db/create.sql
-
+ echo htmlspecialchars($_SERVER['PHP_SELF']);
 -->
