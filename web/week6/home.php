@@ -23,6 +23,7 @@ if (isset($_SESSION['login_user'])){
 
     <div class="page-container">
         <?php
+        // password verification and salting
             if (isset($_POST['username']) && isset($_POST['password'])) 
             {
                 $username = $_POST['username'];
