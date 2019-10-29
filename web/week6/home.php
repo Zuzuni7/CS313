@@ -39,7 +39,7 @@ if (isset($_SESSION['login_user'])){
                     $username = $row['username'];
                     $pswd = $row['user_password'];
                     //echo "<p>$user_id "." $username "." $pswd</p>";
-    
+
                     if($pswd == $password)
                     {
                         $_SESSION['user_id'] = $username;
