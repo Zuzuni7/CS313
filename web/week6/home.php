@@ -22,24 +22,24 @@ if (isset($_SESSION['user_id'])){
 <body>
     <h1>Reminisce: <em>"Remember Well"</em></h1>
     <div class="container">
-    <section id="content">
-        <form action="login.php" method="post" role="form">
-            <h1>Login Form</h1>
-            <div>
-                <input type="text" name="username" placeholder="Username" required="" id="username" />
-            </div>
-            <div>
-                <input type="password" placeholder="Password" required="" id="password" name="password" />
-            </div>
-            <div>
-                <input type="submit" value="Lemme In!" />
-                <a href="#">Lost your password?</a>
-                <a href="#">Register</a>
-            </div>
-        </form><!-- form -->
-        
-    </section><!-- content -->
-</div>
+        <div class="login">
+            <form method="post" action="">
+                <p><input type="text" name="login" value="" placeholder="Username or Email"></p>
+                <p><input type="password" name="password" value="" placeholder="Password"></p>
+                <p class="remember_me">
+                <label>
+                    <input type="checkbox" name="remember_me" id="remember_me">
+                    Remember me on this computer
+                </label>
+                </p>
+                <p class="submit"><input type="submit" name="commit" value="Login"></p>
+            </form>
+        </div>
+        <div class="login-help">
+        <p>Forgot your password? <a href="#">Click here to reset it</a>.</p>
+        </div>
+    
+    </div>
         <!-- <div class="page-container">
         <form action="login.php" method="post" role="form">
             <div class="form-group row">
