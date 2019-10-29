@@ -21,50 +21,6 @@ if (isset($_SESSION['user_id'])){
 <body>
     <h1>Reminisce: Homepage</h1>
 
-    <div class="page-container">
-        <?php
-        // password verification and salting
-            // if (isset($_POST['username']) && isset($_POST['password'])) 
-            // {
-            //     $username = $_POST['username'];
-            //     $password = $_POST['password'];
-            //     $stmt = $db->prepare("SELECT * FROM user_ WHERE username = :username AND user_password = :passwrd");
-            //     $stmt->bindValue(':username', $username);
-            //     $stmt->bindValue(':passwrd', $password);
-            //     $stmt->execute();
-            //     //echo "<p>We just executed</p>";
-            //     while ($row = $stmt->fetch(PDO::FETCH_ASSOC))
-            //     {
-            //         $user_id = $row['user_id'];
-            //         $username = $row['username'];
-            //         $pswd = $row['user_password'];
-            //         //echo "<p>$user_id "." $username "." $pswd</p>";
-
-            //         if($pswd == $password)
-            //         {
-            //             $_SESSION['user_id'] = $username;
-            //             //header("location: profile.php");
-            //             //$db = get_db();
-            //             //echo "<h1>$username and $password</h1>";
-            //             echo "<h2>Welcome $username! </h2>";
-            //             //echo "Password $password";
-                            
-            //             /*Load in user data*/
-            //         }
-            //         else
-            //         {
-            //             $e = "Incorrect Password.";
-            //             echo "<p>$e</p>";
-            //         }
-            //     }
-            // }
-            // else 
-            // {
-            //     $e = "Please fill out the entire form.";
-            //     echo "<p>$e</p>";
-            // }
-        ?>
-        </div>
         <div class="page-container">
         <!--<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>-->
         <form action="login.php" method="post" role="form">
@@ -84,9 +40,7 @@ if (isset($_SESSION['user_id'])){
         <?php
         if (isset($_SESSION['username']))
         {
-            $statement = $db->prepare('SELECT d.title, d.entry_text, d.created_date FROM daily_entry d WHERE d.user_id = (SELECT u.user_id FROM user_ u WHERE u.username = $username);');
-            //$statement->bindValue(':username', $username);
-            //$statement->bindValue(':passwrd', $password);
+            $statement = $db->prepare('SELECT d.title, d.entry_text, d.created_date FROM daily_entry d WHERE d.user_id = (SELECT u.user_id FROM user_ u WHERE u.username = $username)');
             $statement->execute();
             //foreach($db->query('SELECT d.title, d.entry_text, d.created_date FROM daily_entry d WHERE d.user_id = (SELECT u.user_id FROM user_ u WHERE u.username = $username);') as $row)
             while($data = $statement->fetch(PDO::FETCH_ASSOC))
