@@ -2,7 +2,7 @@
 require 'dbConnect.php';
 //include('login.php');
 $db = get_db();
-if (isset($_SESSION['login_user'])){
+if (isset($_SESSION['user_id'])){
     header("location: profile.php");
     session_start();
 }
@@ -52,21 +52,21 @@ if (isset($_SESSION['login_user'])){
                         /*Load in user data*/
                         //$query = '';
                         
-                        $statement = $db->prepare('SELECT d.title, d.entry_text, d.created_date FROM daily_entry d WHERE d.user_id = (SELECT u.user_id FROM user_ u WHERE u.username = $username);');
-                        //$statement->bindValue(':username', $username);
-                        //$statement->bindValue(':passwrd', $password);
-                        $statement->execute();
-                        //foreach($db->query('SELECT d.title, d.entry_text, d.created_date FROM daily_entry d WHERE d.user_id = (SELECT u.user_id FROM user_ u WHERE u.username = $username);') as $row)
-                        while($data = $statement->fetch(PDO::FETCH_ASSOC))
-                        {
-                            $title = $data["title"]; 
-                            $entry = $data["entry_text"]; 
-                            $date = $data["created_date"];
+                        // $statement = $db->prepare('SELECT d.title, d.entry_text, d.created_date FROM daily_entry d WHERE d.user_id = (SELECT u.user_id FROM user_ u WHERE u.username = $username);');
+                        // //$statement->bindValue(':username', $username);
+                        // //$statement->bindValue(':passwrd', $password);
+                        // $statement->execute();
+                        // //foreach($db->query('SELECT d.title, d.entry_text, d.created_date FROM daily_entry d WHERE d.user_id = (SELECT u.user_id FROM user_ u WHERE u.username = $username);') as $row)
+                        // while($data = $statement->fetch(PDO::FETCH_ASSOC))
+                        // {
+                        //     $title = $data["title"]; 
+                        //     $entry = $data["entry_text"]; 
+                        //     $date = $data["created_date"];
                             
-                            $_SESSION["name"] = $username;
+                        //     $_SESSION["name"] = $username;
                             
-                            echo "<p>$title $date <br/> $entry </p>";
-                        }
+                        //     echo "<p>$title $date <br/> $entry </p>";
+                        // }
                     }
                     else
                     {
@@ -98,7 +98,24 @@ if (isset($_SESSION['login_user'])){
             <span><?php echo $e; ?></span>
         </form>
         <?php
-
+        if isset($_SESSION["username"])
+        {
+            $statement = $db->prepare('SELECT d.title, d.entry_text, d.created_date FROM daily_entry d WHERE d.user_id = (SELECT u.user_id FROM user_ u WHERE u.username = $username);');
+            //$statement->bindValue(':username', $username);
+            //$statement->bindValue(':passwrd', $password);
+            $statement->execute();
+            //foreach($db->query('SELECT d.title, d.entry_text, d.created_date FROM daily_entry d WHERE d.user_id = (SELECT u.user_id FROM user_ u WHERE u.username = $username);') as $row)
+            while($data = $statement->fetch(PDO::FETCH_ASSOC))
+            {
+                $title = $data["title"]; 
+                $entry = $data["entry_text"]; 
+                $date = $data["created_date"];
+                
+                $_SESSION["name"] = $username;
+                
+                echo "<p>$title $date <br/> $entry </p>";
+            }
+        }
         ?>
     </div>
 
