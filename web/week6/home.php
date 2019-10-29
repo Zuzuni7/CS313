@@ -3,7 +3,7 @@ require 'dbConnect.php';
 //include('login.php');
 $db = get_db();
 if (isset($_SESSION['user_id'])){
-    header("location: login.php");
+    //header("location: login.php");
     session_start();
 }
 
