@@ -27,20 +27,20 @@ if (isset($_SESSION['user_id'])){
                 <p><input type="text" name="username" value="" placeholder="Username or Email"></p>
                 <p><input type="password" name="password" value="" placeholder="Password"></p>
                 <p class="remember_me">
-                <label>
-                    <input type="checkbox" name="remember_me" id="remember_me">
-                    Remember me on this computer
-                </label>
+                    <label>
+                        <input type="checkbox" name="remember_me" id="remember_me">
+                        Remember me on this computer
+                    </label>
                 </p>
                 <p class="submit"><input type="submit" name="commit" value="Login"></p>
             </form>
         </div>
         <div class="login-help">
-        <p>Forgot your password? <a href="#">Click here to reset it</a>.</p>
+            <p>Forgot your password? <a href="#">Click here to reset it</a>.</p>
         </div>
     
     </div>
-        <!-- <div class="page-container">
+        <div class="page-container">
         <form action="login.php" method="post" role="form">
             <div class="form-group row">
                 <div class="col-sm-10">
@@ -55,7 +55,7 @@ if (isset($_SESSION['user_id'])){
             <input type="submit" name="submit" value="Submit">
             <span><?php echo $e; ?></span>
         </form>
-    </div> -->
+    </div>
 
 </body>
 </html>
