@@ -15,14 +15,32 @@ if (isset($_SESSION['user_id'])){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="../bootstrap-4.3.1-dist/css/bootstrap.css">
-    <link rel="stylesheet" href="primary.css">
+    <!-- <link rel="stylesheet" href="primary.css"> -->
+    <link rel="stylesheet" href="fancy.css">
 	<title>Reminisce</title>
 </head>
 <body>
     <h1>Reminisce: <em>"Remember Well"</em></h1>
-
-        <div class="page-container">
+    <div class="container">
+    <section id="content">
+        <form action="login.php" method="post" role="form">
+            <h1>Login Form</h1>
+            <div>
+                <input type="text" name="username" placeholder="Username" required="" id="username" />
+            </div>
+            <div>
+                <input type="password" placeholder="Password" required="" id="password" name="password" />
+            </div>
+            <div>
+                <input type="submit" value="Lemme In!" />
+                <a href="#">Lost your password?</a>
+                <a href="#">Register</a>
+            </div>
+        </form><!-- form -->
         
+    </section><!-- content -->
+</div>
+        <!-- <div class="page-container">
         <form action="login.php" method="post" role="form">
             <div class="form-group row">
                 <div class="col-sm-10">
@@ -37,7 +55,7 @@ if (isset($_SESSION['user_id'])){
             <input type="submit" name="submit" value="Submit">
             <span><?php echo $e; ?></span>
         </form>
-    </div>
+    </div> -->
 
 </body>
 </html>

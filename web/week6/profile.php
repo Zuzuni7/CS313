@@ -1,7 +1,7 @@
 <?php
 require('dbConnect.php');
 $db = get_db();
-$_SESSION["username"];
+$_SESSION["user_id"];
 ?>
 
 <!DOCTYPE html>
