@@ -4,8 +4,9 @@ require 'dbConnect.php';
 $db = get_db();
 if (isset($_SESSION['login_user'])){
     header("location: profile.php");
+    session_start();
 }
-session_start();
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -61,6 +62,8 @@ session_start();
                             $entry = $data["entry_text"]; 
                             $date = $data["created_date"];
                             
+                            $_SESSION["name"] = $username;
+                            
                             echo "<p>$title $date <br/> $entry </p>";
                         }
                     }
@@ -92,8 +95,7 @@ session_start();
             <span><?php echo $e; ?></span>
         </form>
         <?php
-            // echo "Welcome $username!";
-            // echo "Password: $password $user_id";    
+
         ?>
     </div>
 
