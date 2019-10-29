@@ -19,7 +19,7 @@ if (isset($_SESSION['user_id'])){
 	<title>Reminisce</title>
 </head>
 <body>
-    <h1>Reminisce: Homepage</h1>
+    <h1>Reminisce: <em>Remember Well</em></h1>
 
         <div class="page-container">
         <!--<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>-->
