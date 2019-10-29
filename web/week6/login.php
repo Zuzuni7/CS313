@@ -56,5 +56,24 @@
         $e = "You must fill out the entire form.";
     }
 ?>   
+
+<?php
+        if (isset($_SESSION['user_id']))
+        {
+            $statement = $db->prepare('SELECT d.title, d.entry_text, d.created_date FROM daily_entry d WHERE d.user_id = (SELECT u.user_id FROM user_ u WHERE u.username = $username)');
+            $statement->execute();
+            //foreach($db->query('SELECT d.title, d.entry_text, d.created_date FROM daily_entry d WHERE d.user_id = (SELECT u.user_id FROM user_ u WHERE u.username = $username);') as $row)
+            while($data = $statement->fetch(PDO::FETCH_ASSOC))
+            {
+                $title = $data["title"]; 
+                $entry = $data["entry_text"]; 
+                $date = $data["created_date"];
+                
+                //$_SESSION["name"] = $username;
+                
+                echo "<p>$title $date <br/> $entry </p>";
+            }
+        }
+        ?>
     </body>
     </html>
