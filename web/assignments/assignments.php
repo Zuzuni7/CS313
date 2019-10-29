@@ -55,7 +55,7 @@ $page = "home";
 			</a>
 			<a href="../Team01/ta07/signup.php">
 				<li>
-					<p><em>Prove 06</em></p>
+					<p><em>Team07</em></p>
 				</li>
 			</a>
 		</ol>
