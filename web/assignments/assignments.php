@@ -53,7 +53,7 @@ $page = "home";
 					<p><em>Prove 06</em></p>
 				</li>
 			</a>
-			<a href="../Team01/ta07/signup.php">
+			<a href="../Team01/ta07/login.php">
 				<li>
 					<p><em>Team07</em></p>
 				</li>
