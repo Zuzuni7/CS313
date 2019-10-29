@@ -40,7 +40,7 @@ if (isset($_SESSION['user_id'])){
         </div>
     
     </div>
-        <div class="page-container">
+    <div class="page-container">
         <form action="login.php" method="post" role="form">
             <div class="form-group row">
                 <div class="col-sm-10">
