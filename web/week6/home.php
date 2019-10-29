@@ -43,22 +43,6 @@ if (isset($_SESSION['user_id'])){
         </div>
     
     </div>
-    <div class="page-container">
-        <form action="login.php" method="post" role="form">
-            <div class="form-group row">
-                <div class="col-sm-10">
-                    <input type="text" name="username" placeholder="Enter your username" required>
-                </div>
-            </div>
-            <div class="form-group row">
-                <div class="col-sm-10">
-                    <input type="password" name="password" placeholder="Enter your password" required>
-                </div>
-            </div>
-            <input type="submit" name="submit" value="Submit">
-            <span><?php echo $e; ?></span>
-        </form>
-    </div>
 
 </body>
 </html>
