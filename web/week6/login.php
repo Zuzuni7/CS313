@@ -58,6 +58,8 @@
 ?>   
 
 <?php
+        echo "$_SESSION['user_id'];
+        
         if (isset($_SESSION['user_id']))
         {
             $statement = $db->prepare('SELECT d.title, d.entry_text, d.created_date FROM daily_entry d WHERE d.user_id = (SELECT u.user_id FROM user_ u WHERE u.username = $username)');

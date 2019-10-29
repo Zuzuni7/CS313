@@ -19,7 +19,7 @@ if (isset($_SESSION['user_id'])){
 	<title>Reminisce</title>
 </head>
 <body>
-    <h1>Reminisce: <em>Remember Well</em></h1>
+    <h1>Reminisce: <em>"Remember Well"</em></h1>
 
         <div class="page-container">
         
@@ -37,24 +37,6 @@ if (isset($_SESSION['user_id'])){
             <input type="submit" name="submit" value="Submit">
             <span><?php echo $e; ?></span>
         </form>
-        <?php
-        if (isset($_SESSION['username']))
-        {
-            $statement = $db->prepare('SELECT d.title, d.entry_text, d.created_date FROM daily_entry d WHERE d.user_id = (SELECT u.user_id FROM user_ u WHERE u.username = $username)');
-            $statement->execute();
-            //foreach($db->query('SELECT d.title, d.entry_text, d.created_date FROM daily_entry d WHERE d.user_id = (SELECT u.user_id FROM user_ u WHERE u.username = $username);') as $row)
-            while($data = $statement->fetch(PDO::FETCH_ASSOC))
-            {
-                $title = $data["title"]; 
-                $entry = $data["entry_text"]; 
-                $date = $data["created_date"];
-                
-                //$_SESSION["name"] = $username;
-                
-                echo "<p>$title $date <br/> $entry </p>";
-            }
-        }
-        ?>
     </div>
 
 </body>
