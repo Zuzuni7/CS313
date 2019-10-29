@@ -34,7 +34,7 @@ if (isset($_SESSION['login_user'])){
                 $stmt->execute();
                 //echo "<p>We just executed</p>";
                 while ($row = $stmt->fetch(PDO::FETCH_ASSOC))
-                 {
+                {
                     $user_id = $row['user_id'];
                     $username = $row['username'];
                     $pswd = $row['user_password'];
@@ -71,12 +71,14 @@ if (isset($_SESSION['login_user'])){
                     else
                     {
                         $e = "Incorrect Password.";
+                        echo "<p>$e</p>";
                     }
                 }
             }
             else 
             {
                 $e = "Please fill out the entire form.";
+                echo "<p>$e</p>";
             }
         ?>
         </div>
