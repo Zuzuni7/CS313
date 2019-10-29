@@ -66,7 +66,8 @@ if (isset($_SESSION['user_id'])){
         ?>
         </div>
         <div class="page-container">
-        <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post" role="form">
+        <!--<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>-->
+        <form action="login.php" method="post" role="form">
             <div class="form-group row">
                 <div class="col-sm-10">
                     <input type="text" name="username" placeholder="Enter your username" required>
