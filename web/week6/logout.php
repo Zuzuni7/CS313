@@ -1,6 +1,6 @@
 <?php
     $db = get_db();
-    require 'dbConnect.php';
+    require 'dbConneherokuoct.php';
 ?>
 
 <!DOCTYPE html>
@@ -13,8 +13,10 @@
 </head>
 <body>
     <form>
-
+        
     </form>
-    
+<?php 
+    die();
+?>
 </body>
 </html>
