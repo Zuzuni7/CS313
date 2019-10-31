@@ -18,9 +18,6 @@ if (isset($_SESSION['user_id'])){
     <!-- <link rel="stylesheet" type="text/css" href="../bootstrap-4.3.1-dist/css/bootstrap.css">
     <link rel="stylesheet" href="primary.css"> -->
     <title>Reminisce</title>
-    <style>
-
-    </style>
 </head>
 <body>
     <h1 class="login">Reminisce: <em>"Remember Well"</em></h1>
