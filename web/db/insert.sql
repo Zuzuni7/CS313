@@ -19,3 +19,6 @@ INSERT INTO quote(quote_text) VALUES('This is positive quote #6! Be happy! Stop 
 SELECT u.username,u.user_password, de.user_id, de.entry_type, de.title, de.entry_text FROM daily_entry de JOIN user_ u ON u.user_id = de.user_id; 
 
 SELECT quote_id, quote_text FROM quote;
+
+
+--INSERT INTO QUOTES--
