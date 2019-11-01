@@ -15,9 +15,16 @@ $db = get_db();
 </head>
 <body>
     <p>Are you sure you want to log out?</p>
+    <form method="POST" action=""> 
+        <input type="submit" name="yes" value="Yes, I'm sure.">
+        <input type="submit" name="no" value="No, I changed my mind.">
+    </form>
 <?php 
-    die();
-    header("location: home.php");
+    if(isset($_POST["yes"]))
+    {
+        die();
+        header("location: home.php");
+    }
 ?>
 </body>
 </html>
