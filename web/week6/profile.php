@@ -16,8 +16,8 @@ $db = get_db();
 </head>
 <body>
 <?php
-        $current_user_id = $_SESSION['user_id'];
-        $stmt = $db->prepare("SELECT username FROM user_ WHERE user_id = $current_user_id");
+        //$current_user_id = $_SESSION['user_id'];
+        $stmt = $db->prepare("SELECT username FROM user_ WHERE user_id = '{$_SESSION['user_id']}'");
         $stmt->execute();
         while ($row = $stmt->fetch(PDO::FETCH_ASSOC))
         {
