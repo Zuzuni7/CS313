@@ -14,7 +14,7 @@
         <title>Login Page</title>
     </head>
     <body>
-    <h1>Welcome<h1>
+    <h1 class="login">Reminisce: <em>"Remember Well"</em></h1>
     <div class="container">
         <div class="login">
             <form method="post" action="login.php">
