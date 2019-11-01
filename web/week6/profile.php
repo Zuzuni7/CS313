@@ -16,7 +16,7 @@ $_SESSION["user_id"];
 </head>
 <body>
 <?php
-        $stmt = $db->prepare("SELECT username FROM user_ WHERE username = 'shalomsims'");
+        $stmt = $db->prepare("SELECT username FROM user_ WHERE username = $username");
         $stmt->execute();
         while ($row = $stmt->fetch(PDO::FETCH_ASSOC))
         {
