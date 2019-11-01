@@ -22,9 +22,11 @@ $db = get_db();
 <?php 
     if(isset($_POST["yes"]))
     {
+        echo $_SESSION["user_id"];
         die();
         header("location: home.php");
     }
+    echo $_SESSION["user_id"];
 ?>
 </body>
 </html>
