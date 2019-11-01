@@ -1,6 +1,6 @@
 <?php
     $db = get_db();
-    require 'dbConneherokuoct.php';
+    require 'dbConnect.php';
 ?>
 
 <!DOCTYPE html>
@@ -15,7 +15,8 @@
 <body>
     <p>Are you sure you want to log out?</p>
 <?php 
-    
+    die();
+    header("location: home.php");
 ?>
 </body>
 </html>
