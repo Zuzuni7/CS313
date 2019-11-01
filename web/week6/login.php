@@ -1,6 +1,5 @@
 <?php
     require 'dbConnect.php';
-    require 'home.php';
     $db = get_db();
 ?>
     <!DOCTYPE html>
