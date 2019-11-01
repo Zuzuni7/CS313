@@ -26,7 +26,9 @@ $_SESSION["user_id"];
 ?>
 
 <div>
-    
+    <?php
+        echo "<a href='logout.php'>LOGOUT</a>"
+    ?>
 </div>
 </body>
 </html>

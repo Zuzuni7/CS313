@@ -15,7 +15,7 @@
 <body>
     <p>Are you sure you want to log out?</p>
 <?php 
-
+    
 ?>
 </body>
 </html>

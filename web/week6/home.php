@@ -21,6 +21,10 @@ if (isset($_SESSION['user_id'])){
 </head>
 <body>
     <h1 class="login">Reminisce: <em>"Remember Well"</em></h1>
+    <?php
+    if (isset(@_SESSION['user_id']))
+    {
+        ?>
     <div class="container">
         <div class="login">
             <form method="post" action="login.php">
@@ -40,6 +44,8 @@ if (isset($_SESSION['user_id'])){
         </div>
     
     </div>
+    ?<
+    ?>
 <?php
     footer("location: logout.php");
 ?>
