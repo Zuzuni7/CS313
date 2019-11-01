@@ -56,7 +56,7 @@
                 $pswd = $row['user_password'];
                 //echo "<p>$user_id "." $username "." $pswd</p>";
 
-                if(password_verify($password = $pswd))
+                if($password = $pswd)
                 {
                     session_start();
                     $_SESSION['user_id'] = $user_id;
