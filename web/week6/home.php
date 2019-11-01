@@ -44,7 +44,7 @@ if (isset($_SESSION['user_id'])){
         </div>
     
     </div>
-    ?<
+    <?
     ?>
 <?php
     footer("location: logout.php");
