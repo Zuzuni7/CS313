@@ -9,14 +9,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <link href="../css/fancy.css" rel="stylesheet" type="text/css" >
+    <title>Logout</title>
 </head>
 <body>
-    <form>
-        
-    </form>
+    <p>Are you sure you want to log out?</p>
 <?php 
-    die();
+
 ?>
 </body>
 </html>

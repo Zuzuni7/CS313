@@ -15,7 +15,7 @@
     <body>
     <h1>Welcome<h1>
     <?php
-    session_start();
+    //session_start();
     $e = '';
 
     if(!empty($_POST)) 
@@ -38,6 +38,7 @@
 
                 if($pswd == $password)
                 {
+                    session_start();
                     $_SESSION['user_id'] = $username;
                     header("location: profile.php");
                     $db = get_db();
