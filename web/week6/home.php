@@ -22,9 +22,13 @@ if (isset($_SESSION['user_id'])){
 <body>
     <h1 class="login">Reminisce: <em>"Remember Well"</em></h1>
     <?php
-    if (isset(@_SESSION['user_id']))
+    if (isset($_SESSION['user_id']))
     {
-
+        header("location: profile.php");
+    }
+    else
+    {
+        header("location: login.php");
     }
         ?>
     <div class="container">
