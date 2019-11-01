@@ -54,9 +54,9 @@
                 $user_id = $row['user_id'];
                 $username = $row['username'];
                 $pswd = $row['user_password'];
-                echo "<p>$user_id "." $username "." $pswd</p>";
+                //echo "<p>$user_id "." $username "." $pswd</p>";
 
-                if(password_verify($password,$hashedPasswordFromDB))
+                if(password_verify($password = $pswd))
                 {
                     session_start();
                     $_SESSION['user_id'] = $user_id;

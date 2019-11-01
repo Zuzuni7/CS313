@@ -54,7 +54,7 @@
                 $user_id = $row['user_id'];
                 $username = $row['username'];
                 $pswd = $row['user_password'];
-                echo "<p>$user_id "." $username "." $pswd</p>";
+                //echo "<p>$user_id "." $username "." $pswd</p>";
                 //password_verify($password,$hashedPasswordFromDB)
                 if($pswd == $password)
                 {
