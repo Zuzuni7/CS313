@@ -59,7 +59,7 @@
                 if($pswd == $password)
                 {
                     session_start();
-                    $_SESSION['user_id'] = $username;
+                    $_SESSION['user_id'] = $user_id;
                     header("location: profile.php");
                     $db = get_db();
                 }
