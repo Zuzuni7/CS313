@@ -19,6 +19,7 @@ session_start();
 <?php
         echo "<p>Getting ready to query.</p>";
         //$current_user_id = $_SESSION['user_id'];
+        $user_id = $_SESSION['user_id'];
         $stmt = $db->prepare("SELECT username FROM user_ WHERE user_id = :userid");
         $stmt->bindValue(':userid', $user_id);
         $stmt->execute();
