@@ -31,7 +31,7 @@ session_start();
 ?>
     <div class="login">
         <form method="post" action="addNote.php">
-            <p><textarea rows="10" cols="50" name="entry" value="" placeholder="What happened today <?php echo"$username";?>?"></textarea></p>
+            <p><textarea rows="10" cols="40" name="entry" value="" placeholder="What happened today <?php echo"$username";?>?"></textarea></p>
             <p>How was your day?</p>
             <p><input type="radio" value="Great!"    name="day">Great!</p>
             <p><input type="radio" value="Okay..."   name="day">Average.</p>
