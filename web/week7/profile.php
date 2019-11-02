@@ -29,23 +29,24 @@ session_start();
             echo "<h1 class='login'>Welcome $username!</h1>";
         }
 ?>
+    <div class="login">
+    <p><input type="textarea" name="en" value="" placeholder="How was your day <?php echo"$username";?>?"></p>
+    </div>
+<?php
+    $statement = $db->prepare("SELECT de.created_date, de.title, de.entry_text, de.entry_type FROM daily_entry de WHERE de.user_id = :userid");
+    $statement->bindValue(':userid', $user_id);
+    $statement->execute();
     
-        <?php
-            $statement = $db->prepare("SELECT de.created_date, de.title, de.entry_text, de.entry_type FROM daily_entry de WHERE de.user_id = :userid");
-            $statement->bindValue(':userid', $user_id);
-            $statement->execute();
-            
-            while($row = $statement->fetch(PDO::FETCH_ASSOC))
-            {
-                $date = $row['created_date'];
-                $title = $row['title'];
-                $entry = $row['daily_entry'];
-                $type = $row['entry_type'];
-
-                echo "<div class='login'><a>$date</a><br/><a>$title</a><br/><a>$entry</a><br/><a>$type</a></div>";
-            }
-            
-        ?>
+    while($row = $statement->fetch(PDO::FETCH_ASSOC))
+    {
+        $date = $row['created_date'];
+        $title = $row['title'];
+        $entry = $row['daily_entry'];
+        $type = $row['entry_type'];
+        echo "<div class='login'><a>$date</a><br/><a>$title</a><br/><a>$entry</a><br/><a>$type</a></div>";
+    }
+    
+?>
     <!-- <div class="login">
     </div> -->
 <div class="login">
