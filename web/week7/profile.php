@@ -35,7 +35,7 @@ session_start();
             <p><input type="radio" name="Good"></p>
             <p><input type="radio" name="Average"></p>
             <p><input type="radio" name="Bad"></p>
-            <p class="submit"><input type="submit" name="commit" value="Login"></p>
+            <p class="submit"><input type="submit" name="commit" value="Submit"></p>
         </form>    
     </div>
 <?php
