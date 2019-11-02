@@ -30,7 +30,7 @@ session_start();
         }
 ?>
     <div class="login">
-        <form class="login">
+        <form>
             <p><input type="textarea" name="en" value="" placeholder="How was your day <?php echo"$username";?>?"></p>
         </form>    
     </div>
