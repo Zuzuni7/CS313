@@ -26,16 +26,16 @@ session_start();
         while ($row = $stmt->fetch(PDO::FETCH_ASSOC))
         {
             $username = $row["username"];
-            echo "<h1>Welcome $username!</h1>";
+            echo "<h1 class='login'>Welcome $username!</h1>";
         }
 ?>
     
         <?php
             $statement = $db->prepare("SELECT de.created_date, de.title, de.entry_text, de.entry_type FROM daily_entry de WHERE de.user_id = :userid");
-            $stmt->bindValue(':userid', $user_id);
-            $stmt->execute();
+            $statement->bindValue(':userid', $user_id);
+            $statement->execute();
             
-            while($row = $stmt->fetch(PDO::FETCH_ASSOC))
+            while($row = $statement->fetch(PDO::FETCH_ASSOC))
             {
                 $date = $row['created_date'];
                 $title = $row['title'];
@@ -48,7 +48,7 @@ session_start();
         ?>
     <!-- <div class="login">
     </div> -->
-<div>
+<div class="login">
     <?php
         footer("location: logout.php");
     ?>
