@@ -50,7 +50,7 @@ session_start();
         $title = $row['title'];
         $entry = $row['daily_entry'];
         $type = $row['entry_type'];
-        echo "<div class='login'><a>$date</a><br/><a>$title</a><br/><a>$entry</a><br/><a>$type</a></div>";
+        echo "<div class='login'><p>$date</p><br/><p>$title</p><br/><p>$entry</p><br/><p>$type</p></div>";
     }
     
 ?>
