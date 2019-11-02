@@ -20,5 +20,6 @@ SELECT u.username,u.user_password, de.user_id, de.entry_type, de.title, de.entry
 
 SELECT quote_id, quote_text FROM quote;
 
+SELECT created_date FROM daily_entry;
 
 --INSERT INTO QUOTES--

@@ -17,9 +17,10 @@ echo "<h1>User Notes!</h1>";
 //how would I pass the user name to this file?? $username with a php form?
 $username = $_POST["username"];
 
-$query = "SELECT de.entry_text, u.username FROM daily_entry de JOIN user_ u ON u.user_id = $username";
+$query = $db->prepare("SELECT de.entry_text, u.username FROM daily_entry de JOIN user_ u ON u.user_id = $username");
 
-foreach ($db->query($query) as $row){
+foreach ($db->query($query) as $row)
+{
     $text = $row['entry_text'];
     $username = $row['username'];
 
