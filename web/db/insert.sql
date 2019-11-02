@@ -69,3 +69,5 @@ VALUES
 , 'Actually finished my project this week! It was pretty hard but I got it. Also Got a huge bag of candy. pretty dope.'
 , 'Not sure whats going on...'
 );
+
+SELECT u.username, de.entry_type, de.entry_text FROM daily_entry de JOIN user_ u USING(user_id);
