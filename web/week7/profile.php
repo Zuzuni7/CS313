@@ -29,11 +29,25 @@ session_start();
             echo "<h1>Welcome $username!</h1>";
         }
 ?>
-    <div class="login">
+    
         <?php
-            $statement = $db->prepare("SELECT created_date, title, entry_text");
+            $statement = $db->prepare("SELECT de.created_date, de.title, de.entry_text, de.entry_type FROM daily_entry de WHERE de.user_id = :userid");
+            $stmt->bindValue(':userid', $user_id);
+            $stmt->execute();
+            
+            while($row = $stmt->fetch(PDO::FETCH_ASSOC))
+            {
+                $date = $row['created_date'];
+                $title = $row['title'];
+                $entry = $row['daily_entry'];
+                $type = $row['entry_type'];
+
+                echo "<div class='login'><a>$date</a><br/><a>$title</a><br/><a>$entry</a><br/><a>$type</a></div>";
+            }
+            
         ?>
-    </div>
+    <!-- <div class="login">
+    </div> -->
 <div>
     <?php
         footer("location: logout.php");
