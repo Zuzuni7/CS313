@@ -14,13 +14,15 @@ $db = get_db();
     <title>Logout</title>
 </head>
 <body>
+    <div class="login">
     <p>Are you sure you want to log out?</p>
-    <form method="POST" action="<?php echo $_SERVER['PHP_SELF']; ?>"> 
-        <input type="submit" name="yes" value="Yes, I'm sure.">
-        <input type="submit" name="no" value="No, I changed my mind.">
-    </form>
+        <form method="POST" action="<?php echo $_SERVER['PHP_SELF']; ?>"> 
+            <input type="submit" name="yes" value="Yes, I'm sure.">
+            <input type="submit" name="no" value="No, I changed my mind.">
+        </form>
+    </div>
 <?php 
-    if(isset($_POST["yes"]))
+    if(isset($_POST['yes']))
     {
         unset($_SESSION["user_id"]);
         header("location: home.php");
