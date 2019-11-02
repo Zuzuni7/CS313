@@ -8,12 +8,14 @@ CREATE TABLE user_
 , user_password VARCHAR(20) NOT NULL
 );
 
+CREATE TYPE entryType AS ENUM ('GOOD', 'AVERAGE', 'BAD');
+
 CREATE TABLE daily_entry
 ( daily_entry_id SERIAL NOT NULL PRIMARY KEY
 , user_id SERIAL REFERENCES user_(user_id)
-, entry_type VARCHAR(10) NOT NULL
-, entry_text VARCHAR(1000) NOT NULL
+, entry_type entryType NOT NULL
 , title VARCHAR(100) NOT NULL
+, entry_text VARCHAR(4000) NOT NULL
 , created_date DATE NOT NULL DEFAULT CURRENT_DATE
 );
 

@@ -32,9 +32,9 @@ session_start();
     <div class="login">
         <form method="post" action="addNote.php">
             <p><input type name="entry" value="" placeholder="How was your day <?php echo"$username";?>?"></p>
-            <p><input type="radio" value="Great!" name="Good"></p>
-            <p><input type="radio" value="Okay..." name="Average"></p>
-            <p><input type="radio" value="Terrible." name="Bad"></p>
+            <p><input type="radio" value="Great!"    name="day"></p>
+            <p><input type="radio" value="Okay..."   name="day"></p>
+            <p><input type="radio" value="Terrible." name="day"></p>
             <p class="submit"><input type="submit" name="commit" value="Submit"></p>
         </form>    
     </div>

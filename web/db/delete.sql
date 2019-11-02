@@ -4,6 +4,7 @@
 DROP TABLE daily_entry;
 DROP TABLE user_;
 DROP TABLE quote;
+DROP TYPE entryType;
 
 --DROP SEQUENCE IF EXISTS quote_s1;
 --DROP SEQUENCE IF EXISTS meh_s1;
