@@ -1,7 +1,8 @@
 <?php
 require('dbConnect.php');
 $db = get_db();
-$_SESSION["user_id"];
+//$_SESSION["user_id"];
+session_start();
 ?>
 
 <!DOCTYPE html>
@@ -16,8 +17,10 @@ $_SESSION["user_id"];
 </head>
 <body>
 <?php
+        echo "<p>Getting ready to query.</p>";
         //$current_user_id = $_SESSION['user_id'];
-        $stmt = $db->prepare("SELECT username FROM user_ WHERE user_id = '{$_SESSION['user_id']}'");
+        $stmt = $db->prepare("SELECT username FROM user_ WHERE user_id = :userid");
+        $stmt->bindValue(':userid', $user_id);
         $stmt->execute();
         while ($row = $stmt->fetch(PDO::FETCH_ASSOC))
         {
@@ -28,7 +31,7 @@ $_SESSION["user_id"];
 
 <div>
     <?php
-        echo "<a href='logout.php'>LOGOUT</a>";
+        footer("location: logout.php");
     ?>
 </div>
 </body>
