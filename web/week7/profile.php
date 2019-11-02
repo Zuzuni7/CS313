@@ -30,7 +30,7 @@ session_start();
         }
 ?>
     <div class="login">
-        <form>
+        <form method="post" action="addNote.php">
             <p><input type="textarea" name="en" value="" placeholder="How was your day <?php echo"$username";?>?"></p>
             <p><input type="radio" name="Good"></p>
             <p><input type="radio" name="Average"></p>
