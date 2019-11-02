@@ -17,7 +17,7 @@ session_start();
 </head>
 <body>
 <?php
-        echo "<p>Getting ready to query.</p>";
+        //echo "<p>Getting ready to query.</p>"; //debugging
         //$current_user_id = $_SESSION['user_id'];
         $user_id = $_SESSION['user_id'];
         $stmt = $db->prepare("SELECT username FROM user_ WHERE user_id = :userid");
@@ -29,7 +29,11 @@ session_start();
             echo "<h1>Welcome $username!</h1>";
         }
 ?>
-
+    <div class="login">
+        <?php
+            $statement = $db->prepare("SELECT created_date, title, entry_text");
+        ?>
+    </div>
 <div>
     <?php
         footer("location: logout.php");
