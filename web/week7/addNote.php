@@ -32,11 +32,19 @@ try {
     // }
     $date = getdate();
     //echo "$date"; // debugging
-    $sql = "INSERT INTO daily_entry (user_id, entry_type, entry_text, title, created_date) VALUES ($user_id, '$status', '$entry', '$title');";
+    $sql = "INSERT INTO daily_entry (user_id, entry_type, entry_text, title, created_date) VALUES (:user_id, :status, :entry, :title);";
+    $stmt = $db->prepare($query);
+    $stmt->bindValue(':user_id',$user_id);
+    $stmt->bindValue(':entry',$entry);
+    $stmt->bindValue(':title',$title);
+    $stmt->bindValue(':status',$status);
+    $stmt->execute();
+
     if ($db->query($sql) == TRUE) {
         echo "New entry created successfully";
     } else {
         echo "Error: " . $sql . "<br>" . $db->error;
+        header("location: profile.php");
     }
     $user_id = $db->lastInsertId();
     //echo "ID: " . $user_id . "Title: " . $title . "Entry: " . $entry . "Status: " . $status;
