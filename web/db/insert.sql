@@ -66,7 +66,7 @@ INSERT INTO daily_entry
 VALUES
 ((SELECT user_id FROM user_ WHERE username = 'shalomsims')
 ,'AVERAGE'
-, 'Actually finished my project this week! It was pretty hard but I got it. Also Got a huge bag of candy. pretty dope.'
+, 'I had a good day today. Some crazy stuff happened. Tony went to McDonanlds to get some biscuits but then the building exploded! SO cray cray. Just as he was pulling in. No one was inside supposedly. But also no one reacted to what was happening. He called me and I sped over to see what all was going on. Buy yea. No cops showed up. No ambulance. People drove by without looking. It was then that I saw this slight filmy looking bubble surrounding the McDonalds and the parking lot where we were standing. I pointed it out to him and he brought to my attention that sound from outside was slowly fading away. Now we think we are in some alternate universe. Kind of crazy. There are some weird creatures walking around us now. I’ll keep you updated. O-O'
 , 'Not sure whats going on...'
 );
 
