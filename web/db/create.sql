@@ -16,7 +16,7 @@ CREATE TABLE daily_entry
 , entry_type entryType NOT NULL
 , entry_text VARCHAR(4000) NOT NULL
 , title VARCHAR(100) NOT NULL
-, created_date DATE NOT NULL DEFAULT CURRENT_DATE
+, created_date TIMESTAMP NOT NULL DEFAULT now()
 );
 
 CREATE TABLE quote 
