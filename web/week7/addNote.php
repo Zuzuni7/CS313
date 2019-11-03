@@ -33,12 +33,13 @@ try {
     $date = getdate();
     echo "<p>about to make the insert query.</p>"; // debugging
     $sql = "INSERT INTO daily_entry (user_id, entry_type, entry_text, title, created_date) VALUES (:user_id, :status, :entry, :title);";
-    echo "prep the query";
+    echo "post insert query";
     $stmt = $db->prepare($query);
     $stmt->bindValue(':user_id',$user_id);
     $stmt->bindValue(':entry',$entry);
     $stmt->bindValue(':title',$title);
     $stmt->bindValue(':status',$status);
+    echo "dd it execute yet? nah fam.";
     $stmt->execute();
     echo "Executed the query";
     if ($db->query($sql) == TRUE) {
