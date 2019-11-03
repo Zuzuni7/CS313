@@ -26,29 +26,27 @@ try {
     //echo $_POST['status']; //debugging
     echo $_SESSION['user_id'];
     //$date = getTimeStamp();
-    echo "<p>about to make the insert query.</p>"; // debugging
+    //echo "<p>about to make the insert query.</p>"; // debugging
     $query = "INSERT INTO daily_entry(user_id, entry_type, entry_text, title, created_date)VALUES(:userid, :stat, :entr, :title, current_timestamp)";
     $stmt = $db->prepare($query);
-    echo "<p>post insert query</p>";
+    //echo "<p>post insert query</p>";
     $stmt->bindValue(':userid',$user_id);
     $stmt->bindValue(':stat',$status);
     $stmt->bindValue(':entr',$entry, PDO::PARAM_STR);
     $stmt->bindValue(':title',$title, PDO::PARAM_STR);
     //$stmt->bindValue(':_date', $date);
-    echo "dd it execute yet? nah fam.";
+    //echo "did it execute yet? nah fam.";
     $stmt->execute();
     
     echo "Executed the query";
-    if ($db->query($query) == TRUE) {
-        echo "New entry created successfully";
-    } else {
-        echo "Error: " . $query . "<br>" . $db->error;
-        header("location: profile.php");
-    }
+    // if ($db->query($query) == TRUE) {
+    //     echo "New entry created successfully";
+    // } else {
+    //     echo "Error: " . $query . "<br>" . $db->error;
+    // }
     $user_id = $db->lastInsertId();
-    //echo "ID: " . $user_id . "Title: " . $title . "Entry: " . $entry . "Status: " . $status;
-    
-   // header("Location: profile.php");
+   header("Location: profile.php");
+   die();
 } catch (Exception $e) {
     echo $e->getMessage();
     die();
