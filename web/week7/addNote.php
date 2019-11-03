@@ -37,6 +37,7 @@ try {
         echo "Error: " . $sql . "<br>" . $db->error;
     }
     $user_id = $db->lastInsertId();
+    echo "ID: " . $user_id . "Title: " . $title . "Entry: " . $entry . "Status: " . $status;
     // foreach ($db->query('SELECT topic_id, topic_name FROM topic;') as $row) {
     //     $topic_id = $row['topic_id'];
     //     $topic_name = $row['topic_name'];
@@ -46,7 +47,7 @@ try {
     //     }
     // }
     
-    header("Location: profile.php");
+   // header("Location: profile.php");
 } catch (Exception $e) {
     echo $e->getMessage();
     die();
