@@ -32,7 +32,7 @@ try {
     // }
     $date = getdate();
     echo "<p>about to make the insert query.</p>"; // debugging
-    $sql = "INSERT INTO daily_entry (user_id, entry_type, entry_text, title, created_date)VALUES(:user_id, :status, :entry, :title,:date)";
+    $query = 'INSERT INTO daily_entry(user_id, entry_type, entry_text, title, created_date)VALUES(:user_id, :status, :entry, :title,:date)';
     $stmt = $db->prepare($query);
     echo "post insert query";
     $stmt->bindValue(':user_id',$user_id);
