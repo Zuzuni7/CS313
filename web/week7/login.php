@@ -86,7 +86,7 @@
 <div class="login">
 <form id="login" action="createAccount.php" method="POST">
 
-	<p><input type="text" id="username" name="txtUser" placeholder="Username"><br /><label for="txtUser">Username</label></p>
+	<p><input type="text" id="username" name="username" placeholder="Username"><br /><label for="txtUser">Username</label></p>
 	<br /><br />
 
 	<p><input type="password" id="password" name="password1" placeholder="Password"><br /><label for="password">Password</label></p>
