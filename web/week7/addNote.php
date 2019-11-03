@@ -25,16 +25,16 @@ try {
 
     //echo $_POST['status']; //debugging
     echo $_SESSION['user_id'];
-    $date = getTimeStamp();
+    //$date = getTimeStamp();
     echo "<p>about to make the insert query.</p>"; // debugging
-    $query = 'INSERT INTO daily_entry(user_id, entry_type, entry_text, title, created_date)VALUES(:_user_id, :_status, :_entry, :_title,:_date)';
+    $query = 'INSERT INTO daily_entry(user_id, entry_type, entry_text, title, created_date)VALUES(:_user_id, :_status, :_entry, :_title, current_timestamp)';
     $stmt = $db->prepare($query);
     echo "post insert query";
     $stmt->bindValue(':_user_id',$user_id);
     $stmt->bindValue(':_entry',$entry);
     $stmt->bindValue(':_title',$title);
     $stmt->bindValue(':_status',$status);
-    $stmt->bindValue(':_date', $date);
+    //$stmt->bindValue(':_date', $date);
     echo "dd it execute yet? nah fam.";
     $stmt->execute();
     echo "Executed the query";
