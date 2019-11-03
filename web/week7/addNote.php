@@ -32,13 +32,14 @@ try {
     // }
     $date = getdate();
     echo "<p>about to make the insert query.</p>"; // debugging
-    $sql = "INSERT INTO daily_entry (user_id, entry_type, entry_text, title, created_date) VALUES (:user_id, :status, :entry, :title);";
+    $sql = "INSERT INTO daily_entry (user_id, entry_type, entry_text, title, created_date)VALUES(:user_id, :status, :entry, :title,:date)";
     $stmt = $db->prepare($query);
-    $stmt->bindValue(':user_id',$user_id);
     echo "post insert query";
+    $stmt->bindValue(':user_id',$user_id);
     $stmt->bindValue(':entry',$entry);
     $stmt->bindValue(':title',$title);
     $stmt->bindValue(':status',$status);
+    $stmt->bindValue(':date', $date);
     echo "dd it execute yet? nah fam.";
     $stmt->execute();
     echo "Executed the query";
