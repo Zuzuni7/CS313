@@ -20,15 +20,16 @@ $user_id = $_SESSION['user_id'];
 try {
     $entry = $_POST["entry"];
     $title = ($_POST["title"]);
-    if ($status != null)
-    {
-        $status = ($_POST["status"]);
-    }
-    else
-    {
-        //die();
-        //header("location: profile.php");
-    }
+    $status = 'TEST';
+    // if ($status != null)
+    // {
+    //     $status = ($_POST["status"]);
+    // }
+    // else
+    // {
+    //     //die();
+    //     //header("location: profile.php");
+    // }
     $date = getdate();
     $sql = "INSERT INTO daily_entry (user_id, entry_type, entry_text, title, created_date) VALUES ($user_id, '$status', '$entry', '$title');";
     if ($db->query($sql) == TRUE) {
