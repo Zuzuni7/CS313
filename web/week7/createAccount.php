@@ -43,7 +43,7 @@ $username = htmlspecialchars($username);
 
 //$hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 
-require("dbConnect.php");
+//require("dbConnect.php");
 
 $query = "INSERT INTO user_(username, user_password) VALUES(:username, :pass)";
 echo "<p>query created</p>";
