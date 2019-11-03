@@ -18,7 +18,7 @@ $password = $_POST['password'];
 if (!isset($username) || $username == "" 
 || !isset($password) || $password == "")
 {
-    echo "<p>ITS NOT SET</p>";
+    //echo "<p>ITS NOT SET</p>";
     $query = 'SELECT username FROM user_';
     $stmt = $db->prepare($query);
     $stmt->execute();
@@ -35,7 +35,7 @@ if (!isset($username) || $username == ""
 }
 else 
 {
-    echo "<p>IT IS SET</p>";
+    //echo "<p>IT IS SET</p>";
     
 $username = htmlspecialchars($username);
 
@@ -45,10 +45,11 @@ require("dbConnect.php");
 
 $query = 'INSERT INTO user_(username, user_password) VALUES(:username, :password)';
 $statement = $db->prepare($query);
+echo "<p>Prepped query is ready</p>";
 $statement->bindValue(':username', $username, PDO::PARAM_STR);
 $statement->bindValue(':password', $password, PDO::PARAM_STR);
 $statement->execute();
-echo "Account successfully created.";
+echo "<p>Account successfully created.</p>";
 
 header("Location: login.php?success=True");
 die(); 
