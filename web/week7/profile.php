@@ -34,9 +34,9 @@ session_start();
             <p><input type="text" name="title" placeholder="" required></p>
             <p><textarea rows="10" cols="40" name="entry" value="" placeholder="What happened today <?php echo"$username";?>?" required></textarea></p>
             <p>How was your day?</p>
-            <p><input type="radio" value="Great!"    name="status">Great!</p>
-            <p><input type="radio" value="Okay..."   name="status">Average.</p>
-            <p><input type="radio" value="Terrible." name="status">Terrible...</p>
+            <p><input type="radio" value="GOOD"    name="status">Great!</p>
+            <p><input type="radio" value="AVERAGE"   name="status">Average.</p>
+            <p><input type="radio" value="BAD" name="status">Terrible...</p>
             <p class="submit"><input type="submit" name="commit" value="Submit"></p>
         </form>    
     </div>
