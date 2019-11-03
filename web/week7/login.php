@@ -83,7 +83,7 @@
 <div class="container">
 
 <h1 class="login">Sign up for new account</h1>
-
+<div class="login">
 <form id="login" action="createAccount.php" method="POST">
 
 	<p><input type="text" id="username" name="txtUser" placeholder="Username"></p>
@@ -97,7 +97,7 @@
 	<p><input type="submit" value="Create Account" /><p>
 
 </form>
-
+</div>
 
 </div>
 <?php
