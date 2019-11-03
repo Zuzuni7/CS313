@@ -18,8 +18,8 @@
     <div class="container">
         <div class="login">
             <form method="post" action="login.php">
-                <p><input type="text" name="username" value="" placeholder="Username or Email"></p>
-                <p><input type="password" name="password" value="" placeholder="Password"></p>
+                <p><input type="text" name="username" value="" placeholder="Username or Email" required></p>
+                <p><input type="password" name="password" value="" placeholder="Password" required></p>
                 <p class="remember_me">
                     <label>
                         <input type="checkbox" name="remember_me" id="remember_me">

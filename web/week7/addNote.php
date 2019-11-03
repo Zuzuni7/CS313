@@ -14,18 +14,44 @@ include 'dbConnect.php';
 </head>
 <body>
 <?php
-echo "<h1>User Notes!</h1>";
-//how would I pass the user name to this file?? $username with a php form?
-$username = $_POST["username"];
+session_start();
+$user_id = $_SESSION['user_id'];
 
-$query = $db->prepare("SELECT de.entry_text, u.username FROM daily_entry de JOIN user_ u ON u.user_id = $username");
-
-foreach ($db->query($query) as $row)
-{
-    $text = $row['entry_text'];
-    $username = $row['username'];
-
-    ?>
+try {
+    $entry = $_POST["entry"];
+    $title = ($_POST["title"]);
+    if ($status != null)
+    {
+        $status = ($_POST["status"]);
+    }
+    else
+    {
+        //die();
+        //header("location: profile.php");
+    }
+    $date = getdate();
+    $sql = "INSERT INTO daily_entry (user_id, entry_type, entry_text, title, created_date) VALUES ($user_id, '$status', '$entry', '$title');";
+    if ($db->query($sql) == TRUE) {
+        echo "New entry created successfully";
+    } else {
+        echo "Error: " . $sql . "<br>" . $db->error;
+    }
+    $user_id = $db->lastInsertId();
+    // foreach ($db->query('SELECT topic_id, topic_name FROM topic;') as $row) {
+    //     $topic_id = $row['topic_id'];
+    //     $topic_name = $row['topic_name'];
+    //     if ($_POST[$topic_name]) {
+    //         $sql = "INSERT INTO link (topic_id, scripture_id) VALUES ($topic_id, $scriptureId);";
+    //         $db->query($sql);
+    //     }
+    // }
+    
+    header("Location: profile.php");
+} catch (Exception $e) {
+    echo $e->getMessage();
+    die();
+}
+?>
     <div class="card">
         <div class="card-header">
             Quote
@@ -37,13 +63,5 @@ foreach ($db->query($query) as $row)
             </blockquote>
         </div>
     </div>
-    <?php
-
-    echo "<p>Username: $username</p>";
-    echo "<p>What happened? $text </p>";
-    echo "<br/><br/>";
-}
-
-?>
 </body>
 </html>
