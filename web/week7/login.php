@@ -35,7 +35,6 @@
     
     </div>
     <?php
-    //session_start();
     $e = '';
 
     if(!empty($_POST)) 
@@ -101,6 +100,6 @@
 </div>
 <?php
 
-        ?>
+?>
     </body>
     </html>

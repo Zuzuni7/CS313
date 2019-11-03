@@ -31,7 +31,7 @@ try {
     //     //header("location: profile.php");
     // }
     $date = getdate();
-    echo "$date";
+    //echo "$date"; // debugging
     $sql = "INSERT INTO daily_entry (user_id, entry_type, entry_text, title, created_date) VALUES ($user_id, '$status', '$entry', '$title');";
     if ($db->query($sql) == TRUE) {
         echo "New entry created successfully";
@@ -39,15 +39,7 @@ try {
         echo "Error: " . $sql . "<br>" . $db->error;
     }
     $user_id = $db->lastInsertId();
-    echo "ID: " . $user_id . "Title: " . $title . "Entry: " . $entry . "Status: " . $status;
-    // foreach ($db->query('SELECT topic_id, topic_name FROM topic;') as $row) {
-    //     $topic_id = $row['topic_id'];
-    //     $topic_name = $row['topic_name'];
-    //     if ($_POST[$topic_name]) {
-    //         $sql = "INSERT INTO link (topic_id, scripture_id) VALUES ($topic_id, $scriptureId);";
-    //         $db->query($sql);
-    //     }
-    // }
+    //echo "ID: " . $user_id . "Title: " . $title . "Entry: " . $entry . "Status: " . $status;
     
    // header("Location: profile.php");
 } catch (Exception $e) {
