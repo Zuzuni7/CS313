@@ -19,7 +19,7 @@ $user_id = $_SESSION['user_id'];
 
 try {
     $entry = $_POST["entry"];
-    $title = ($_POST["title"]);
+    $title = $_POST["title"];
     $status = 'TEST';
     // if ($status != null)
     // {
