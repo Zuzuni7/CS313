@@ -80,9 +80,9 @@
     }
 ?>   
 <br />
-<div>
+<div class="container">
 
-<h1>Sign up for new account</h1>
+<h1 class="login">Sign up for new account</h1>
 
 <form id="login" action="createAccount.php" method="POST">
 
