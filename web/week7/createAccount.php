@@ -25,13 +25,16 @@ if (!isset($username) || $username == ""
     
     foreach ($names as $name) {
         $checkname = $name['username'];
-        // if ($username === $checkname) {
-        //     echo "<p>Failed to create account.</p>";
-        //     header("location: login.php");
-        //     die();
-        // }
+        if ($username === $checkname) {
+            echo "<p>Failed to create account.</p>";
+            header("location: login.php");
+            die();
+        }
     }
-
+}
+else 
+{
+    
 $username = htmlspecialchars($username);
 
 //$hashedPassword = password_hash($password, PASSWORD_DEFAULT);
@@ -46,13 +49,6 @@ $statement->execute();
 
 header("Location: login.php");
 die(); 
-
-}
-else 
-{
-    echo "<p>Failed to create account.</p>";
-	header("Location: login.php");
-	die(); 
 }
 ?>
 </body>
