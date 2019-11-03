@@ -16,7 +16,7 @@ $password = $_POST['password'];
 if (!isset($username) || $username == ""
 	|| !isset($password) || $password == "")
 {
-	header("Location: signUp.php");
+	header("Location: login.php");
 	die(); 
 }
 
@@ -33,7 +33,7 @@ $statement->bindValue(':username', $username);
 $statement->bindValue(':password', $hashedPassword);
 $statement->execute();
 
-header("Location: signIn.php");
+header("Location: login.php");
 die(); 
 ?>
 </body>

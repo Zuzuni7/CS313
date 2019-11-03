@@ -90,7 +90,7 @@
 	<br /><br />
 
 	<p><input type="password" id="password" name="password1" placeholder="Password"><br /><label for="password">Password</label></p>
-	<p><input type="password" id="password" name="password" placeholder="Verify Password"><br /><label for="password">Password</label></p>
+	<p><input type="password" id="password" name="password" placeholder="Verify Password"><br /><label for="password">Verify Password</label></p>
 	<br /><br />
 
 	<p><input type="submit" value="Create Account" /><p>
