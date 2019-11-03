@@ -39,10 +39,10 @@ try {
     $stmt->execute();
     
     echo "Executed the query";
-    if ($db->query($sql) == TRUE) {
+    if ($db->query($query) == TRUE) {
         echo "New entry created successfully";
     } else {
-        echo "Error: " . $sql . "<br>" . $db->error;
+        echo "Error: " . $query . "<br>" . $db->error;
         header("location: profile.php");
     }
     $user_id = $db->lastInsertId();
