@@ -48,7 +48,7 @@ session_start();
     {
         $date = $row['created_date'];
         $title = $row['title'];
-        $entry = $row['daily_entry'];
+        $entry = $row['entry_text'];
         $type = $row['entry_type'];
         echo "<div class='login'><p>$date</p><br/><p>$title</p><br/><p>$entry</p><br/><p>$type</p></div>";
     }
