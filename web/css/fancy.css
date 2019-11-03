@@ -7,6 +7,12 @@
  * PSD by Orman Clark: https://goo.gl/D8zmk
  */
 
+ @media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  [class*="login"] {
+    width: 100%;
+  }
+}
 body {
   font: 13px/20px "Lucida Grande", Tahoma, Verdana, sans-serif;
   color: #404040;
