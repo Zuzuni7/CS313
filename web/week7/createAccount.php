@@ -43,11 +43,12 @@ require("dbConnect.php");
 
 $query = 'INSERT INTO user_(username, user_password) VALUES(:username, :password)';
 $statement = $db->prepare($query);
-$statement->bindValue(':username', $username);
-$statement->bindValue(':password', $password);
+$statement->bindValue(':username', $username, PDO::PARAM_STR);
+$statement->bindValue(':password', $password, PDO::PARAM_STR);
 $statement->execute();
 echo "Account successfully created.";
-header("Location: login.php");
+
+header("Location: login.php?success=True");
 die(); 
 }
 ?>
