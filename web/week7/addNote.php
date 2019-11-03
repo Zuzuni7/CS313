@@ -10,7 +10,7 @@ include 'dbConnect.php';
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="../bootstrap-4.3.1-dist/css/bootstrap.css">
     <link href="../css/fancy.css" rel="stylesheet" type="text/css" >
-    <title>Notes</title>
+    <title>Add Note</title>
 </head>
 <body>
 <?php

@@ -57,10 +57,22 @@ session_start();
 ?>
     <!-- <div class="login">
     </div> -->
+
 <div class="login">
-    <?php
-        footer("location: logout.php");
-    ?>
-</div>
+    <p>Are you sure you want to log out?</p>
+        <form method="POST" action="<?php echo $_SERVER['PHP_SELF']; ?>"> 
+            <input type="submit" name="yes" value="Yes, I'm sure.">
+            <input type="submit" name="no" value="No, I changed my mind.">
+        </form>
+    </div>
+<?php 
+    if(isset($_POST['yes']))
+    {
+        unset($_SESSION["user_id"]);
+        header("location: home.php");
+        die();
+    }
+?>
+
 </body>
 </html>
