@@ -46,7 +46,7 @@ $statement = $db->prepare($query);
 $statement->bindValue(':username', $username);
 $statement->bindValue(':password', $password);
 $statement->execute();
-
+echo "Account successfully created.";
 header("Location: login.php");
 die(); 
 }
