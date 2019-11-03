@@ -19,7 +19,7 @@ if (!isset($username) || $username == "" || !isset($password) || $password == ""
 {
     $query = 'SELECT username FROM user_';
     $stmt = $db -> prepare($query);
-    $stmt -> execute();
+    $stmt->execute();
     $names = $stmt -> fetchall(PDO::FETCH_ASSOC);
     
     foreach ($names as $name) {
@@ -30,21 +30,13 @@ if (!isset($username) || $username == "" || !isset($password) || $password == ""
             die();
         }
     }
-    
-}
-else 
-{
-    echo "<p>Failed to create account.</p>";
-	header("Location: login.php");
-	die(); 
-}
 
 $username = htmlspecialchars($username);
 
 //$hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 
 require("dbConnect.php");
-$db = get_db();
+
 $query = 'INSERT INTO user_(username, user_password) VALUES(:username, :password)';
 $statement = $db->prepare($query);
 $statement->bindValue(':username', $username);
@@ -53,6 +45,14 @@ $statement->execute();
 
 header("Location: login.php");
 die(); 
+
+}
+else 
+{
+    echo "<p>Failed to create account.</p>";
+	header("Location: login.php");
+	die(); 
+}
 ?>
 </body>
 </html>
