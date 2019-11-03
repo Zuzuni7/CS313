@@ -21,9 +21,9 @@ $user_id = $_SESSION['user_id'];
 try {
     $entry = $_POST["entry"];
     $title = $_POST["title"];
-    $status = 'TEST';
+    $status = $_POST["status"];
 
-    echo $_POST['status'];
+    //echo $_POST['status']; //debugging
    
     $date = getdate();
     //echo "<p>about to make the insert query.</p>"; // debugging
