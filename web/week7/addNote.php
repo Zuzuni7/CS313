@@ -30,8 +30,8 @@ try {
     $query = "INSERT INTO daily_entry(user_id, entry_type, entry_text, title, created_date)VALUES(:userid, :stat, :entr, :title, current_timestamp)";
     $stmt = $db->prepare($query);
     echo "<p>post insert query</p>";
-    $stmt->bindValue(':userid',$user_id, PDO::PARAM_STR);
-    $stmt->bindValue(':stat',$status, PDO::PARAM_STR);
+    $stmt->bindValue(':userid',$user_id);
+    $stmt->bindValue(':stat',$status);
     $stmt->bindValue(':entr',$entry, PDO::PARAM_STR);
     $stmt->bindValue(':title',$title, PDO::PARAM_STR);
     //$stmt->bindValue(':_date', $date);
