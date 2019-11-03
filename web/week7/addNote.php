@@ -37,6 +37,7 @@ try {
     //$stmt->bindValue(':_date', $date);
     echo "dd it execute yet? nah fam.";
     $stmt->execute();
+    $results = $stmt->fetchall(PDO::FETCH_ASSOC);
     echo "Executed the query";
     if ($db->query($sql) == TRUE) {
         echo "New entry created successfully";
