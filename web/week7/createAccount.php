@@ -23,7 +23,7 @@ if (!isset($username) || $username == ""
 
 $username = htmlspecialchars($username);
 
-$hashedPassword = password_hash($password, PASSWORD_DEFAULT);
+//$hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 
 require("dbConnect.php");
 $db = get_db();
@@ -31,7 +31,7 @@ $query = 'INSERT INTO user_(username, user_password) VALUES(:username, :password
 $statement = $db->prepare($query);
 $statement->bindValue(':username', $username);
 
-$statement->bindValue(':password', $hashedPassword);
+$statement->bindValue(':password', $password);
 $statement->execute();
 
 header("Location: login.php");
