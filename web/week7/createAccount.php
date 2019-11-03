@@ -32,9 +32,11 @@ if (!isset($username) || $username == ""
             die();
         }
     }
+    echo "<p>Failed to create account.</p>";
+    header("location: login.php");
+    die();
 }
-else 
-{
+
     //echo "<p>IT IS SET</p>";
     
 $username = htmlspecialchars($username);
@@ -54,7 +56,7 @@ echo "<p>Account successfully created.</p>";
 
 header("Location: login.php?success=True");
 die(); 
-}
+
 ?>
 </body>
 </html>
