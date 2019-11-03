@@ -10,7 +10,8 @@
 </head>
 <body>
 <?php
-
+include 'dbConnect.php';
+$db = get_db();
 $username = $_POST['username'];
 $password = $_POST['password'];
 if (!isset($username) || $username == "" || !isset($password) || $password == "")
