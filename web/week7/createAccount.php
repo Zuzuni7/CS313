@@ -18,6 +18,7 @@ $password = $_POST['password'];
 if (!isset($username) || $username == "" 
 || !isset($password) || $password == "")
 {
+    echo "<p>ITS NOT SET</p>";
     $query = 'SELECT username FROM user_';
     $stmt = $db->prepare($query);
     $stmt->execute();
@@ -34,6 +35,7 @@ if (!isset($username) || $username == ""
 }
 else 
 {
+    echo "<p>IT IS SET</p>";
     
 $username = htmlspecialchars($username);
 
