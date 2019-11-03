@@ -26,7 +26,7 @@ try {
     //echo $_POST['status']; //debugging
     echo $_SESSION['user_id'];
     $date = getTimeStamp();
-    //echo "<p>about to make the insert query.</p>"; // debugging
+    echo "<p>about to make the insert query.</p>"; // debugging
     $query = 'INSERT INTO daily_entry(user_id, entry_type, entry_text, title, created_date)VALUES(:_user_id, :_status, :_entry, :_title,:_date)';
     $stmt = $db->prepare($query);
     echo "post insert query";
