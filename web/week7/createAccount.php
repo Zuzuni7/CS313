@@ -43,12 +43,12 @@ $username = htmlspecialchars($username);
 
 require("dbConnect.php");
 
-$query = 'INSERT INTO user_(username, user_password) VALUES(:username, :password)';
+$query = "INSERT INTO user_(username, user_password) VALUES(:username, :pass)";
 echo "<p>query created</p>";
 $statement = $db->prepare($query);
 echo "<p>Prepped query is ready</p>";
 $statement->bindValue(':username', $username, PDO::PARAM_STR);
-$statement->bindValue(':password', $password, PDO::PARAM_STR);
+$statement->bindValue(':pass', $password, PDO::PARAM_STR);
 $statement->execute();
 echo "<p>Account successfully created.</p>";
 
