@@ -31,7 +31,7 @@ try {
     //     //header("location: profile.php");
     // }
     $date = getdate();
-    echo $date;
+    echo "$date";
     $sql = "INSERT INTO daily_entry (user_id, entry_type, entry_text, title, created_date) VALUES ($user_id, '$status', '$entry', '$title');";
     if ($db->query($sql) == TRUE) {
         echo "New entry created successfully";
