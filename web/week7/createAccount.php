@@ -25,11 +25,11 @@ if (!isset($username) || $username == ""
     
     foreach ($names as $name) {
         $checkname = $name['username'];
-        if ($username === $checkname) {
-            echo "<p>Failed to create account.</p>";
-            header("location: login.php");
-            die();
-        }
+        // if ($username === $checkname) {
+        //     echo "<p>Failed to create account.</p>";
+        //     header("location: login.php");
+        //     die();
+        // }
     }
 
 $username = htmlspecialchars($username);
