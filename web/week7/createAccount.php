@@ -16,6 +16,7 @@ $password = $_POST['password'];
 if (!isset($username) || $username == ""
 	|| !isset($password) || $password == "")
 {
+    echo "<p>Failed to create account.</p>";
 	header("Location: login.php");
 	die(); 
 }
