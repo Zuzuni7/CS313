@@ -46,7 +46,6 @@ $db = get_db();
 $query = 'INSERT INTO user_(username, user_password) VALUES(:username, :password)';
 $statement = $db->prepare($query);
 $statement->bindValue(':username', $username);
-
 $statement->bindValue(':password', $password);
 $statement->execute();
 

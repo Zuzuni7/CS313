@@ -13,6 +13,6 @@ $db = get_db();
     <title>Logout</title>
 </head>
 <body>
-   
+
 </body>
 </html>
