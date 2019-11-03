@@ -23,7 +23,7 @@ try {
     $title = $_POST["title"];
     $status = 'TEST';
 
-    echo "$_POST['status']";
+    echo $_POST['status'];
    
     $date = getdate();
     //echo "<p>about to make the insert query.</p>"; // debugging
