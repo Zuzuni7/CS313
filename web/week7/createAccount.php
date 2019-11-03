@@ -15,16 +15,17 @@ $db = get_db();
 
 $username = $_POST['username'];
 $password = $_POST['password'];
-if (!isset($username) || $username == "" || !isset($password) || $password == "")
+if (!isset($username) || $username == "" 
+|| !isset($password) || $password == "")
 {
     $query = 'SELECT username FROM user_';
-    $stmt = $db -> prepare($query);
+    $stmt = $db->prepare($query);
     $stmt->execute();
-    $names = $stmt -> fetchall(PDO::FETCH_ASSOC);
+    $names = $stmt->fetchall(PDO::FETCH_ASSOC);
     
     foreach ($names as $name) {
         $checkname = $name['username'];
-        if ($username === $name) {
+        if ($username === $checkname) {
             echo "<p>Failed to create account.</p>";
             header("location: login.php");
             die();
