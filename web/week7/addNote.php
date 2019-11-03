@@ -19,25 +19,25 @@ session_start();
 $user_id = $_SESSION['user_id'];
 
 try {
+    $status = $_POST["status"];
     $entry = $_POST["entry"];
     $title = $_POST["title"];
-    $status = $_POST["status"];
 
     //echo $_POST['status']; //debugging
     echo $_SESSION['user_id'];
     //$date = getTimeStamp();
     echo "<p>about to make the insert query.</p>"; // debugging
-    $query = 'INSERT INTO daily_entry(user_id, entry_type, entry_text, title, created_date)VALUES(:_user_id, :_status, :_entry, :_title, current_timestamp)';
+    $query = "INSERT INTO daily_entry(user_id, entry_type, entry_text, title, created_date)VALUES(:userid, :stat, :entr, :title, current_timestamp)";
     $stmt = $db->prepare($query);
-    echo "post insert query";
-    $stmt->bindValue(':_user_id',$user_id);
-    $stmt->bindValue(':_entry',$entry);
-    $stmt->bindValue(':_title',$title);
-    $stmt->bindValue(':_status',$status);
+    echo "<p>post insert query</p>";
+    $stmt->bindValue(':userid',$user_id, PDO::PARAM_STR);
+    $stmt->bindValue(':stat',$status, PDO::PARAM_STR);
+    $stmt->bindValue(':entr',$entry, PDO::PARAM_STR);
+    $stmt->bindValue(':title',$title, PDO::PARAM_STR);
     //$stmt->bindValue(':_date', $date);
     echo "dd it execute yet? nah fam.";
     $stmt->execute();
-    $results = $stmt->fetchall(PDO::FETCH_ASSOC);
+    
     echo "Executed the query";
     if ($db->query($sql) == TRUE) {
         echo "New entry created successfully";
