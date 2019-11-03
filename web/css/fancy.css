@@ -7,9 +7,9 @@
  * PSD by Orman Clark: https://goo.gl/D8zmk
  */
 
- @media only screen and (max-width: 768px) {
+ @media only screen and (min-width: 800px) {
   /* For mobile phones: */
-  [class*="login"] {
+  .login {
     width: 100%;
   }
 }
