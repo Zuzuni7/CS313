@@ -44,6 +44,7 @@ $username = htmlspecialchars($username);
 require("dbConnect.php");
 
 $query = 'INSERT INTO user_(username, user_password) VALUES(:username, :password)';
+echo "<p>query created</p>";
 $statement = $db->prepare($query);
 echo "<p>Prepped query is ready</p>";
 $statement->bindValue(':username', $username, PDO::PARAM_STR);
