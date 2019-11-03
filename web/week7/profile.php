@@ -61,8 +61,8 @@ session_start();
 <div class="login">
     <p>Do you want to log out?</p>
         <form method="POST" action="<?php echo $_SERVER['PHP_SELF']; ?>"> 
-            <input type="submit" name="yes" value="Yes, I'm sure.">
-            <input type="submit" name="no" value="No, I changed my mind.">
+            <input type="submit" name="yes" value="Yes">
+            <input type="submit" name="no" value="No">
         </form>
     </div>
 <?php 
