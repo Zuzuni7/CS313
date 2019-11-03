@@ -79,26 +79,29 @@
         $e = "You must fill out the entire form.";
     }
 ?>   
+<br />
+<div>
 
+<h1>Sign up for new account</h1>
+
+<form id="login" action="createAccount.php" method="POST">
+
+	<p><input type="text" id="username" name="txtUser" placeholder="Username"></p>
+	<p><label for="txtUser">Username</label></p>
+	<br /><br />
+
+	<p><input type="password" id="password" name="password" placeholder="Password"></p>
+	<p><label for="password">Password</label></p>
+	<br /><br />
+
+	<p><input type="submit" value="Create Account" /><p>
+
+</form>
+
+
+</div>
 <?php
-        //echo "$_SESSION['user_id']";
 
-        if (isset($_SESSION['user_id']))
-        {
-            $statement = $db->prepare('SELECT d.title, d.entry_text, d.created_date FROM daily_entry d WHERE d.user_id = (SELECT u.user_id FROM user_ u WHERE u.username = $username)');
-            $statement->execute();
-            //foreach($db->query('SELECT d.title, d.entry_text, d.created_date FROM daily_entry d WHERE d.user_id = (SELECT u.user_id FROM user_ u WHERE u.username = $username);') as $row)
-            while($data = $statement->fetch(PDO::FETCH_ASSOC))
-            {
-                $title = $data["title"]; 
-                $entry = $data["entry_text"]; 
-                $date = $data["created_date"];
-                
-                //$_SESSION["name"] = $username;
-                
-                echo "<p>$title $date <br/> $entry </p>";
-            }
-        }
         ?>
     </body>
     </html>
