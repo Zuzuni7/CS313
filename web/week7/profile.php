@@ -41,7 +41,7 @@ session_start();
         </form>    
     </div>
 <?php
-    $statement = $db->prepare("SELECT de.created_date, de.title, de.entry_text, de.entry_type FROM daily_entry de WHERE de.user_id = :userid");
+    $statement = $db->prepare("SELECT de.created_date, de.title, de.entry_text, de.entry_type FROM daily_entry de WHERE de.user_id = :userid ORDER BY created_date DESC");
     $statement->bindValue(':userid', $user_id);
     $statement->execute();
     
