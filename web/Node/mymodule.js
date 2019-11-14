@@ -21,7 +21,6 @@ module.exports = function(directory,extension,callback)
             });
             callback(null,fileList);
         }
-        
     })
 }
 

@@ -1,0 +1,17 @@
+{
+    "/": {
+        "resCode": 404,
+        "contentType": "text/html",
+        "path": "./index.html"
+    },
+    "/home": {
+        "resCode": 200,
+        "contentType": "text/html",
+        "path": "./index.html"
+    },
+    "/getData": {
+        "resCode": 200,
+        "contentType": "application/json",
+        "path": "./data.json"
+    }
+}
